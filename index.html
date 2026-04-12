@@ -1,97 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>RV Travels</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<style>
-body{margin:0;font-family:Poppins;background:#f8fafc}
-
-/* NAVBAR */
-.navbar{
-position:fixed;top:0;width:100%;
-display:flex;justify-content:space-between;align-items:center;
-padding:15px 20px;
-background:rgba(255,255,255,0.9);
-backdrop-filter:blur(10px);
-z-index:9999;
-}
-.logo{display:flex;align-items:center;gap:10px;font-weight:600;color:#1e40af}
-.logo img{width:40px;height:40px}
-.menu a{margin-left:15px;text-decoration:none;color:#1e40af;font-weight:500}
-
-/* FIX OVERLAP */
-.page{padding-top:90px}
-
-/* HERO */
-.hero{
-height:90vh;
-background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') center/cover;
-display:flex;align-items:center;justify-content:center;
-text-align:center;color:white;position:relative;
-}
-.hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.6)}
-.hero-content{position:relative}
-
-/* BUTTON */
-.btn{
-background:#F59E0B;padding:12px 22px;border-radius:8px;
-text-decoration:none;color:black;font-weight:600
-}
-
-/* WHATSAPP */
-.whatsapp{
-position:fixed;bottom:20px;right:20px;
-width:65px;height:65px;background:#25D366;
-display:flex;align-items:center;justify-content:center;
-border-radius:50%;color:white;font-size:28px;
-z-index:9999;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-.menu{display:none}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RV Travels - Premium Car Rental South Gujarat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://image2url.com/r2/bucket3/images/1775983872364-c720d0bd-d805-4c37-ab69-1c0bf78f3d99.png" alt="RV Travels">
+                <span>RV Travels</span>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="fleet.html">Fleet</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
 
-<!-- NAVBAR -->
-<div class="navbar">
-<div class="logo">
-<img src="https://image2url.com/r2/bucket3/images/1775983872364-c720d0bd-d805-4c37-ab69-1c0bf78f3d99.png">
-<span>RV Travels</span>
-</div>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="fade">Premium Car Rental Service</h1>
+            <p class="fade tagline">20+ Years • Clean Cars • On-Time Guarantee • 24/7 Support</p>
+            <div class="hero-buttons fade">
+                <a href="fleet.html" class="btn-primary">View Fleet</a>
+                <a href="services.html" class="btn-secondary">Our Services</a>
+            </div>
+        </div>
+    </section>
 
-<div class="menu">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="fleet.html">Fleet</a>
-<a href="contact.html">Contact</a>
-</div>
-</div>
+    <!-- SERVICES OVERVIEW -->
+    <section class="services-overview container fade">
+        <h2>Why Choose RV Travels?</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <i class="fas fa-car"></i>
+                <h3>Well Maintained Fleet</h3>
+                <p>Latest models with regular servicing</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-clock"></i>
+                <h3>On-Time Pickups</h3>
+                <p>Guaranteed punctuality every time</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Round the clock customer assistance</p>
+            </div>
+        </div>
+    </section>
 
-<div class="page">
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/919825656444?text=Hi!%20I%20want%20to%20book%20a%20car%20with%20RV%20Travels" class="whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-<div class="hero">
-<div class="hero-content">
-<h1>Premium Car Rental Service in South Gujarat</h1>
-<p>20+ Years • Clean Cars • On-Time Guarantee • 24/7 Support</p>
-<br>
-<a href="services.html" class="btn">View Services</a>
-</div>
-</div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 RV Travels. Serving South Gujarat with pride. | 📞 98256 56444</p>
+        </div>
+    </footer>
 
-</div>
-
-<!-- WHATSAPP -->
-<a href="https://wa.me/919825656444?text=Hi!%20Can%20I%20know%20charges%20for%20booking%20a%20car?"
-class="whatsapp"><i class="fab fa-whatsapp"></i></a>
-
+    <script src="script.js"></script>
 </body>
 </html>
