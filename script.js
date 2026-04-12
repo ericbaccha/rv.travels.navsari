@@ -1,38 +1,21 @@
-// Navbar shadow on scroll
-window.addEventListener("scroll", () => {
-  const nav = document.querySelector(".nav");
-  if (window.scrollY > 50) {
-    nav.style.boxShadow = "0 10px 30px rgba(0,0,0,0.1)";
-  } else {
-    nav.style.boxShadow = "none";
-  }
-});
+// MOBILE MENU TOGGLE
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
 
-// Smooth scroll
-document.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+if(menuBtn){
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("show");
   });
-});
+}
 
-// Simple fade-in animation
-const elements = document.querySelectorAll(".service-card, .card");
+// SCROLL ANIMATION
+const faders = document.querySelectorAll(".fade");
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = "translateY(0)";
+window.addEventListener("scroll", () => {
+  faders.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 80){
+      el.classList.add("show");
     }
   });
-});
-
-elements.forEach(el => {
-  el.style.opacity = 0;
-  el.style.transform = "translateY(40px)";
-  el.style.transition = "0.6s";
-  observer.observe(el);
 });
