@@ -1,41 +1,80 @@
-<section class="container">
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fleet | RV Travels</title>
 
-<h2>Our Fleet</h2>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-<div class="fleet-grid">
+<style>
+body { font-family:Poppins; margin:0; background:#f8fafc; }
+
+.section {
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+}
+
+.grid {
+display:grid;
+gap:20px;
+}
+
+@media(min-width:768px){
+.grid { grid-template-columns:repeat(2,1fr); }
+}
+
+.card {
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+img {
+width:100%;
+height:230px;
+object-fit:cover;
+}
+
+.info {
+padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="section grid">
 
 <div class="card">
-<div class="img-wrap">
 <img src="https://image2url.com/r2/bucket1/images/1775992359618-391829ed-e502-40b8-92e6-f7de0b3ea23a.webp">
+<div class="info">
+<b>Maruti Dzire</b><br>₹12/km
 </div>
-<h3>Maruti Dzire</h3>
-<p>₹12/km</p>
 </div>
 
 <div class="card">
-<div class="img-wrap">
 <img src="https://image2url.com/r2/bucket2/images/1775983699291-4caa7411-becc-4f3c-b878-327a3d505891.jpeg">
+<div class="info">
+<b>Maruti Ertiga</b><br>₹14/km
 </div>
-<h3>Maruti Ertiga</h3>
-<p>₹14/km</p>
 </div>
 
 <div class="card">
-<div class="img-wrap">
 <img src="https://image2url.com/r2/bucket2/images/1775983694411-41b4e690-b1cd-4317-b7e3-06529677af1b.jpeg">
+<div class="info">
+<b>Kia Carens</b><br>₹16/km
 </div>
-<h3>Kia Carens</h3>
-<p>₹16/km</p>
 </div>
 
 <div class="card">
-<div class="img-wrap">
 <img src="https://image2url.com/r2/bucket1/images/1775992358659-447709c2-61c8-4fe7-8459-bee434ae87b3.avif">
+<div class="info">
+<b>Toyota Innova</b><br>₹18/km
 </div>
-<h3>Toyota Innova</h3>
-<p>₹18/km</p>
-</div>
-
 </div>
 
-</section>
+</div>
+
+</body>
+</html>
