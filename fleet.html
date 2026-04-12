@@ -1,177 +1,152 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Fleet</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
-  }
-  
-  .navbar {
-    background: white;
-    padding: 15px 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .logo img {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .logo span {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .menu {
-    display: flex;
-    gap: 25px;
-  }
-  
-  .menu a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
-  
-  .menu a:hover {
-    color: #25D366;
-  }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 100px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-  }
-  
-  .card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-  }
-  
-  .info {
-    padding: 20px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-  }
-  
-  .whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 15px rgba(37,211,102,0.4);
-    cursor: pointer;
-    transition: transform 0.3s;
-  }
-  
-  .whatsapp:hover {
-    transform: scale(1.1);
-  }
-  
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      gap: 15px;
-      padding: 15px;
-    }
-    
-    .menu {
-      gap: 15px;
-    }
-    
-    .grid {
-      grid-template-columns: 1fr;
-      padding: 80px 15px;
-      gap: 20px;
-    }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet - RV Travels</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="logo">
-      <img src="https://image2url.com/r2/bucket3/images/1775983872364-c720d0bd-d805-4c37-ab69-1c0bf78f3d99.png" alt="RV Travels Logo">
-      <span>RV Travels</span>
-    </div>
-    <div class="menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="fleet.html">Fleet</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </div>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://image2url.com/r2/bucket3/images/1775983872364-c720d0bd-d805-4c37-ab69-1c0bf78f3d99.png" alt="RV Travels">
+                <span>RV Travels</span>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="fleet.html" class="active">Fleet</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Fleet Grid -->
-  <div class="section grid">
-    <div class="card">
-      <img src="https://image2url.com/r2/bucket1/images/1775992359618-391829ed-e502-40b8-92e6-f7de0b3ea23a.webp" alt="Dzire">
-      <div class="info">Dzire • ₹12/km</div>
+    <!-- FLEET HERO -->
+    <section class="fleet-hero">
+        <div class="container">
+            <h1 class="fade">Our Premium Fleet</h1>
+            <p class="fade">Well-maintained vehicles for every journey</p>
+        </div>
+    </section>
+
+    <!-- FLEET FILTERS -->
+    <div class="fleet-filters container fade">
+        <button class="filter-btn active" data-filter="all">All Vehicles</button>
+        <button class="filter-btn" data-filter="sedan">Sedan</button>
+        <button class="filter-btn" data-filter="suv">SUV/MPV</button>
     </div>
 
-    <div class="card">
-      <img src="https://image2url.com/r2/bucket2/images/1775983699291-4caa7411-becc-4f3c-b878-327a3d505891.jpeg" alt="Ertiga">
-      <div class="info">Ertiga • ₹14/km</div>
-    </div>
+    <!-- FLEET GRID -->
+    <section class="fleet-grid">
+        <div class="card fade" data-category="sedan">
+            <div class="card-image">
+                <img src="https://image2url.com/r2/bucket1/images/1775992359618-391829ed-e502-40b8-92e6-f7de0b3ea23a.webp" alt="Dzire">
+                <div class="vehicle-type">Sedan</div>
+            </div>
+            <div class="card-body">
+                <h3>Suzuki Dzire</h3>
+                <div class="price">₹12/km</div>
+                <ul class="features">
+                    <li><i class="fas fa-users"></i> 4 Seater</li>
+                    <li><i class="fas fa-gas-pump"></i> Petrol</li>
+                    <li><i class="fas fa-snowflake"></i> AC</li>
+                </ul>
+                <div class="card-actions">
+                    <a href="contact.html" class="btn-primary">Book Now</a>
+                    <a href="https://wa.me/919825656444?text=Hi!%20I%20want%20to%20book%20Dzire" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
 
-    <div class="card">
-      <img src="https://image2url.com/r2/bucket2/images/1775983694411-41b4e690-b1cd-4317-b7e3-06529677af1b.jpeg" alt="Kia Carens">
-      <div class="info">Kia Carens • ₹16/km</div>
-    </div>
+        <div class="card fade" data-category="suv">
+            <div class="card-image">
+                <img src="https://image2url.com/r2/bucket2/images/1775983699291-4caa7411-becc-4f3c-b878-327a3d505891.jpeg" alt="Ertiga">
+                <div class="vehicle-type">MPV</div>
+            </div>
+            <div class="card-body">
+                <h3>Maruti Ertiga</h3>
+                <div class="price">₹14/km</div>
+                <ul class="features">
+                    <li><i class="fas fa-users"></i> 7 Seater</li>
+                    <li><i class="fas fa-gas-pump"></i> Petrol</li>
+                    <li><i class="fas fa-snowflake"></i> AC</li>
+                </ul>
+                <div class="card-actions">
+                    <a href="contact.html" class="btn-primary">Book Now</a>
+                    <a href="https://wa.me/919825656444?text=Hi!%20I%20want%20to%20book%20Ertiga" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
 
-    <div class="card">
-      <img src="https://image2url.com/r2/bucket1/images/1775992358659-447709c2-61c8-4fe7-8459-bee434ae87b3.avif" alt="Innova">
-      <div class="info">Innova • ₹18/km</div>
-    </div>
-  </div>
+        <div class="card fade" data-category="suv">
+            <div class="card-image">
+                <img src="https://image2url.com/r2/bucket2/images/1775983694411-41b4e690-b1cd-4317-b7e3-06529677af1b.jpeg" alt="Kia Carens">
+                <div class="vehicle-type">MPV</div>
+            </div>
+            <div class="card-body">
+                <h3>Kia Carens</h3>
+                <div class="price">₹16/km</div>
+                <ul class="features">
+                    <li><i class="fas fa-users"></i> 7 Seater</li>
+                    <li><i class="fas fa-gas-pump"></i> Petrol/Diesel</li>
+                    <li><i class="fas fa-snowflake"></i> AC</li>
+                </ul>
+                <div class="card-actions">
+                    <a href="contact.html" class="btn-primary">Book Now</a>
+                    <a href="https://wa.me/919825656444?text=Hi!%20I%20want%20to%20book%20Kia%20Carens" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
 
-  <!-- WhatsApp Button -->
-  <div class="whatsapp">
-    💬
-  </div>
+        <div class="card fade" data-category="suv">
+            <div class="card-image">
+                <img src="https://image2url.com/r2/bucket1/images/1775992358659-447709c2-61c8-4fe7-8459-bee434ae87b3.avif" alt="Innova">
+                <div class="vehicle-type">SUV</div>
+            </div>
+            <div class="card-body">
+                <h3>Toyota Innova</h3>
+                <div class="price">₹18/km</div>
+                <ul class="features">
+                    <li><i class="fas fa-users"></i> 7 Seater</li>
+                    <li><i class="fas fa-gas-pump"></i> Diesel</li>
+                    <li><i class="fas fa-snowflake"></i> AC</li>
+                </ul>
+                <div class="card-actions">
+                    <a href="contact.html" class="btn-primary">Book Now</a>
+                    <a href="https://wa.me/919825656444?text=Hi!%20I%20want%20to%20book%20Innova" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/919825656444?text=Hi!%20Show%20me%20your%20fleet%20availability" class="whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 RV Travels. Premium fleet for South Gujarat. | 📞 98256 56444</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
