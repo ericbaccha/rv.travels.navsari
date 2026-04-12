@@ -1,50 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RV Travels</title>
 
-<title>RV Travels | Premium Car Rental</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<style>
+body { font-family:Poppins; margin:0; }
+
+/* NAVBAR */
+.navbar {
+display:flex; justify-content:space-between;
+padding:15px 20px; background:white;
+position:sticky; top:0; z-index:1000;
+box-shadow:0 4px 20px rgba(0,0,0,0.05);
+}
+
+.logo { display:flex; gap:10px; align-items:center; }
+
+.logo img { width:45px; }
+
+.menu { display:flex; gap:20px; }
+
+.menu a {
+text-decoration:none;
+color:#1e40af;
+font-weight:600;
+}
+
+.hamburger { display:none; cursor:pointer; }
+
+/* HERO */
+.hero {
+background:linear-gradient(135deg,#1e40af,#3b82f6);
+color:white; text-align:center;
+padding:120px 20px;
+}
+
+.btn {
+background:#F59E0B;
+padding:12px 20px;
+border-radius:10px;
+text-decoration:none;
+color:black;
+display:inline-block;
+margin-top:10px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+position:fixed; bottom:20px; right:20px;
+background:#25D366;
+color:white; width:60px; height:60px;
+display:flex; justify-content:center;
+align-items:center; border-radius:50%;
+font-size:28px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.menu { display:none; flex-direction:column; background:white; position:absolute; top:70px; right:20px; padding:20px; }
+.menu.show { display:flex; }
+.hamburger { display:block; }
+}
+</style>
 
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav class="nav">
-  <h1>RV Travels</h1>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="fleet.html">Fleet</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-
-<h1>Premium Car Rental Service in South Gujarat</h1>
-
-<p class="tagline">
-20+ Years of Trusted Service | Clean Cars | On-Time Guarantee | 24/7 Support
-</p>
-
-<p class="stats">
-1000+ Happy Customers | Serving Since 2004
-</p>
-
-<a href="https://wa.me/919825656444?text=Hi!%20Can%20I%20know%20charges%20for%20booking%20a%20car?"
-class="btn-primary">
-Book on WhatsApp
+<a href="https://wa.me/919825656444?text=Hi!%20Can%20I%20know%20charges%20for%20booking%20a%20car?" class="whatsapp">
+<i class="fab fa-whatsapp"></i>
 </a>
 
-</section>
+<div class="navbar" id="navbar">
+<div class="logo">
+<img src="https://image2url.com/r2/bucket3/images/1775983872364-c720d0bd-d805-4c37-ab69-1c0bf78f3d99.png">
+<b>RV Travels</b>
+</div>
+
+<div class="menu" id="menu">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="fleet.html">Fleet</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<div class="hamburger" onclick="toggleMenu()">
+<i class="fas fa-bars"></i>
+</div>
+</div>
+
+<div class="hero">
+<h1>Premium Car Rental Service in South Gujarat</h1>
+<p>20+ Years | Clean Cars | On-Time Guarantee | 24/7 Support</p>
+<a href="services.html" class="btn">Explore Services</a>
+</div>
+
+<script>
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("show");
+}
+
+/* NAVBAR SCROLL EFFECT */
+window.addEventListener("scroll", ()=>{
+document.getElementById("navbar").style.boxShadow =
+window.scrollY > 50 ? "0 4px 20px rgba(0,0,0,0.1)" : "none";
+});
+</script>
 
 </body>
 </html>
