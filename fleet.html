@@ -1,257 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fleet | RV Travels</title>
 
-<title>RV Travels | Car Rental Navsari</title>
-
-<script src="https://cdn.tailwindcss.com"></script>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
 <style>
-body { font-family: 'Poppins', sans-serif; }
+body { font-family:Poppins; margin:0; background:#f8fafc; }
 
-/* NAVBAR */
-nav.scrolled {
-background: rgba(255,255,255,0.95);
-box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+.section {
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
 }
 
-/* WHATSAPP */
-.whatsapp {
-position: fixed;
-bottom: 20px;
-right: 20px;
-background: linear-gradient(135deg,#25D366,#128C7E);
-color:white;
-width:60px;height:60px;
-display:flex;align-items:center;justify-content:center;
-border-radius:50%;
-font-size:28px;
-z-index:999;
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
-animation:pulse 2s infinite;
+.grid {
+display:grid;
+gap:20px;
 }
 
-@keyframes pulse {
-0%,100%{transform:scale(1);}
-50%{transform:scale(1.08);}
+@media(min-width:768px){
+.grid { grid-template-columns:repeat(2,1fr); }
 }
 
-/* CARDS */
 .card {
-background: white;
-border-radius: 16px;
-padding: 12px;
-transition: all 0.4s ease;
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
 }
 
-.card:hover {
-transform: translateY(-8px);
-box-shadow:0 20px 40px rgba(0,0,0,0.12);
+img {
+width:100%;
+height:230px;
+object-fit:cover;
 }
 
-/* IMAGE FIX (ALL SAME SIZE) */
-.img-wrap {
-width: 100%;
-height: 200px;
-overflow: hidden;
-border-radius: 16px;
-background: #f3f4f6;
-display: flex;
-align-items: center;
-justify-content: center;
+.info {
+padding:15px;
 }
-
-.car-img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-object-position: center;
-transition: transform 0.5s ease;
-}
-
-.card:hover .car-img {
-transform: scale(1.08);
-}
-
-/* FADE */
-.fade {opacity:0;transform:translateY(30px);transition:0.7s;}
-.fade.show {opacity:1;transform:translateY(0);}
 </style>
-
 </head>
 
-<body class="bg-gray-50">
+<body>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/919825656444?text=Hi!%20Can%20I%20know%20charges%20for%20booking%20a%20car?"
-class="whatsapp">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<!-- NAVBAR -->
-<nav class="fixed w-full bg-white z-50 p-4 flex justify-between items-center">
-<div class="flex items-center gap-2">
-<img src="https://image2url.com/r2/bucket3/images/1775983872364-c720d0bd-d805-4c37-ab69-1c0bf78f3d99.png" class="w-10">
-<h1 class="font-bold text-xl text-blue-900">RV Travels</h1>
-</div>
-
-<div class="hidden md:flex gap-6 font-semibold">
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#fleet">Fleet</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
-
-<!-- HERO -->
-<section id="home" class="pt-32 text-center bg-gradient-to-r from-blue-900 to-blue-600 text-white fade">
-
-<h1 class="text-4xl md:text-6xl font-bold mb-4">
-Reliable Car Rentals in Navsari
-</h1>
-
-<p class="mb-6">Since 2004 • 24/7 Service • Professional Drivers</p>
-
-<a href="https://wa.me/919825656444?text=Hi!%20Can%20I%20know%20charges%20for%20booking%20a%20car?"
-class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold">
-Book on WhatsApp
-</a>
-
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="max-w-7xl mx-auto py-16 fade">
-
-<h2 class="text-3xl font-bold text-center mb-10">Our Services</h2>
-
-<div class="grid md:grid-cols-3 gap-6">
+<div class="section grid">
 
 <div class="card">
-<h3 class="font-bold text-xl">Local Travel</h3>
-<p>Navsari, Bardoli, Surat rides.</p>
+<img src="https://image2url.com/r2/bucket1/images/1775992359618-391829ed-e502-40b8-92e6-f7de0b3ea23a.webp">
+<div class="info">
+<b>Maruti Dzire</b><br>₹12/km
+</div>
 </div>
 
 <div class="card">
-<h3 class="font-bold text-xl">Airport Transfers</h3>
-<p>Surat, Ahmedabad, Baroda & Mumbai.</p>
+<img src="https://image2url.com/r2/bucket2/images/1775983699291-4caa7411-becc-4f3c-b878-327a3d505891.jpeg">
+<div class="info">
+<b>Maruti Ertiga</b><br>₹14/km
+</div>
 </div>
 
 <div class="card">
-<h3 class="font-bold text-xl">Outstation Trips</h3>
-<p>Goa, Bangalore, Pondicherry & more.</p>
+<img src="https://image2url.com/r2/bucket2/images/1775983694411-41b4e690-b1cd-4317-b7e3-06529677af1b.jpeg">
+<div class="info">
+<b>Kia Carens</b><br>₹16/km
+</div>
 </div>
 
 <div class="card">
-<h3 class="font-bold text-xl">Marriage Events</h3>
-<p>24/7 driver standby.</p>
+<img src="https://image2url.com/r2/bucket1/images/1775992358659-447709c2-61c8-4fe7-8459-bee434ae87b3.avif">
+<div class="info">
+<b>Toyota Innova</b><br>₹18/km
 </div>
-
-<div class="card">
-<h3 class="font-bold text-xl">Corporate Use</h3>
-<p>Company transportation.</p>
-</div>
-
-<div class="card">
-<h3 class="font-bold text-xl">Monthly Rentals</h3>
-<p>₹45K–₹55K (2500–3000 km)</p>
 </div>
 
 </div>
-</section>
-
-<!-- FLEET -->
-<section id="fleet" class="bg-white py-16 fade">
-
-<h2 class="text-3xl font-bold text-center mb-10">Our Fleet</h2>
-
-<div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-<!-- DZIRE -->
-<div class="card text-center">
-<div class="img-wrap">
-<img src="https://image2url.com/r2/bucket1/images/1775992359618-391829ed-e502-40b8-92e6-f7de0b3ea23a.webp" class="car-img object-[center_60%]">
-</div>
-<h3 class="font-bold mt-3">Maruti Dzire</h3>
-<p>5-Seater • ₹12/km</p>
-</div>
-
-<!-- ERTIGA -->
-<div class="card text-center">
-<div class="img-wrap">
-<img src="https://image2url.com/r2/bucket2/images/1775983699291-4caa7411-becc-4f3c-b878-327a3d505891.jpeg" class="car-img object-[center_55%]">
-</div>
-<h3 class="font-bold mt-3">Maruti Ertiga</h3>
-<p>7-Seater • ₹14/km</p>
-</div>
-
-<!-- CARENS -->
-<div class="card text-center">
-<div class="img-wrap">
-<img src="https://image2url.com/r2/bucket2/images/1775983694411-41b4e690-b1cd-4317-b7e3-06529677af1b.jpeg" class="car-img object-[center_60%]">
-</div>
-<h3 class="font-bold mt-3">Kia Carens</h3>
-<p>7-Seater • ₹16/km</p>
-</div>
-
-<!-- INNOVA -->
-<div class="card text-center">
-<div class="img-wrap">
-<img src="https://image2url.com/r2/bucket1/images/1775992358659-447709c2-61c8-4fe7-8459-bee434ae87b3.avif" class="car-img object-[center_60%]">
-</div>
-<h3 class="font-bold mt-3">Toyota Innova</h3>
-<p>7-Seater • ₹18/km</p>
-</div>
-
-</div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="py-16 text-center fade">
-
-<h2 class="text-3xl font-bold mb-6">Contact Us</h2>
-
-<p>📍 Navsari, Gujarat</p>
-<p>📞 99789 56444</p>
-<p class="mb-6">💬 WhatsApp: 98256 56444</p>
-
-<a href="tel:9978956444"
-class="bg-blue-700 text-white px-6 py-3 rounded-lg mr-3">
-Call Now
-</a>
-
-<a href="https://wa.me/919825656444?text=Hi!%20Can%20I%20know%20charges%20for%20booking%20a%20car?"
-class="bg-green-500 text-white px-6 py-3 rounded-lg">
-WhatsApp
-</a>
-
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-blue-900 text-white text-center p-6">
-<p>© 2026 RV Travels</p>
-</footer>
-
-<script>
-// NAVBAR SCROLL
-window.addEventListener("scroll",()=>{
-document.querySelector("nav").classList.toggle("scrolled",window.scrollY>50)
-})
-
-// FADE IN
-const faders=document.querySelectorAll(".fade");
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(e=>{
-if(e.isIntersecting){e.target.classList.add("show")}
-})
-});
-faders.forEach(el=>observer.observe(el));
-</script>
 
 </body>
 </html>
