@@ -1,37 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>About | RV Travels</title>
+<title>About</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-body { font-family:Poppins; margin:0; background:#f8fafc; }
-
-.navbar {
-display:flex; justify-content:space-between;
-padding:15px 20px; background:white;
-position:sticky; top:0;
-box-shadow:0 4px 20px rgba(0,0,0,0.05);
-}
-
-.menu a { margin-left:20px; text-decoration:none; color:#1e40af; }
-
-.section {
-max-width:900px;
-margin:auto;
-padding:60px 20px;
-text-align:center;
-}
-
-h1 { color:#1e40af; }
+body{margin:0;font-family:Poppins;background:#f8fafc}
+.navbar{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;padding:15px 20px;background:white;z-index:9999}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{width:40px}
+.menu a{margin-left:15px;text-decoration:none;color:#1e40af}
+.page{padding-top:100px;text-align:center;padding:100px 20px}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;width:65px;height:65px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:28px}
 </style>
 </head>
 
 <body>
 
 <div class="navbar">
-<b>RV Travels</b>
+<div class="logo">
+<img src="https://image2url.com/r2/bucket3/images/1775983872364-c720d0bd-d805-4c37-ab69-1c0bf78f3d99.png">
+<span>RV Travels</span>
+</div>
+
 <div class="menu">
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
@@ -41,17 +35,14 @@ h1 { color:#1e40af; }
 </div>
 </div>
 
-<div class="section">
+<div class="page">
 <h1>About Us</h1>
-
-<p>RV Travels is a premium car rental service in South Gujarat, serving customers since 2004.</p>
-
-<p>With over 20+ years of trusted experience, we provide clean, well-maintained vehicles along with professional drivers ensuring safety, comfort, and on-time service.</p>
-
-<p>We have successfully served 1000+ happy customers across Navsari, Surat, Bardoli and beyond.</p>
-
-<p>Whether it’s a short city ride or a long-distance journey, RV Travels ensures a smooth and stress-free travel experience.</p>
+<p>Serving since 2004 with 1000+ happy customers.</p>
+<p>Trusted car rental service across South Gujarat.</p>
 </div>
+
+<a href="https://wa.me/919825656444?text=Hi!%20Can%20I%20know%20charges%20for%20booking%20a%20car?"
+class="whatsapp"><i class="fab fa-whatsapp"></i></a>
 
 </body>
 </html>
