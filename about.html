@@ -1,48 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>About</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<style>
-body{margin:0;font-family:Poppins;background:#f8fafc}
-.navbar{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;padding:15px 20px;background:white;z-index:9999}
-.logo{display:flex;align-items:center;gap:10px}
-.logo img{width:40px}
-.menu a{margin-left:15px;text-decoration:none;color:#1e40af}
-.page{padding-top:100px;text-align:center;padding:100px 20px}
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;width:65px;height:65px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:28px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - RV Travels</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://image2url.com/r2/bucket3/images/1775983872364-c720d0bd-d805-4c37-ab69-1c0bf78f3d99.png" alt="RV Travels">
+                <span>RV Travels</span>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="fleet.html">Fleet</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
 
-<div class="navbar">
-<div class="logo">
-<img src="https://image2url.com/r2/bucket3/images/1775983872364-c720d0bd-d805-4c37-ab69-1c0bf78f3d99.png">
-<span>RV Travels</span>
-</div>
+    <!-- ABOUT HERO -->
+    <section class="about-hero">
+        <div class="container">
+            <h1 class="fade">About RV Travels</h1>
+            <p class="fade">Trusted Car Rental Service Since 2004</p>
+        </div>
+    </section>
 
-<div class="menu">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="fleet.html">Fleet</a>
-<a href="contact.html">Contact</a>
-</div>
-</div>
+    <!-- ABOUT CONTENT -->
+    <section class="about-content container">
+        <div class="about-grid fade">
+            <div class="about-text">
+                <h2>20+ Years of Excellence</h2>
+                <p>RV Travels has been serving South Gujarat since 2004 with over 1000+ happy customers. We specialize in reliable car rentals for local travel, airport transfers, and outstation trips.</p>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <h3>20+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3>1000+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Vehicles</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1558618047-3c8c76bbb17e?w=600&h=400&fit=crop" alt="Our Team">
+            </div>
+        </div>
+    </section>
 
-<div class="page">
-<h1>About Us</h1>
-<p>Serving since 2004 with 1000+ happy customers.</p>
-<p>Trusted car rental service across South Gujarat.</p>
-</div>
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/919825656444?text=Hi!%20Tell%20me%20more%20about%20RV%20Travels" class="whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-<a href="https://wa.me/919825656444?text=Hi!%20Can%20I%20know%20charges%20for%20booking%20a%20car?"
-class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 RV Travels. Serving South Gujarat with pride. | 📞 98256 56444</p>
+        </div>
+    </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
