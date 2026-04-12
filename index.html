@@ -2,70 +2,72 @@
 <html>
 <head>
 <title>RV Travels</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-body { font-family:Poppins; margin:0; }
+body{margin:0;font-family:Poppins;background:#f8fafc}
 
 /* NAVBAR */
-.navbar {
-display:flex; justify-content:space-between;
-padding:15px 20px; background:white;
-position:sticky; top:0; z-index:1000;
-box-shadow:0 4px 20px rgba(0,0,0,0.05);
+.navbar{
+position:fixed;width:100%;top:0;
+display:flex;justify-content:space-between;align-items:center;
+padding:15px 25px;
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(12px);
+z-index:1000;
 }
 
-.logo { display:flex; gap:10px; align-items:center; }
+.logo{display:flex;gap:10px;align-items:center}
+.logo img{width:45px}
 
-.logo img { width:45px; }
-
-.menu { display:flex; gap:20px; }
-
-.menu a {
-text-decoration:none;
-color:#1e40af;
-font-weight:600;
-}
-
-.hamburger { display:none; cursor:pointer; }
+.menu{display:flex;gap:25px}
+.menu a{color:#1e40af;text-decoration:none;font-weight:500}
 
 /* HERO */
-.hero {
-background:linear-gradient(135deg,#1e40af,#3b82f6);
-color:white; text-align:center;
-padding:120px 20px;
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') center/cover;
+display:flex;align-items:center;justify-content:center;
+text-align:center;color:white;position:relative;
+}
+.hero::before{
+content:'';position:absolute;inset:0;background:rgba(0,0,0,0.6);
+}
+.hero-content{position:relative;max-width:700px;animation:fadeUp 1s}
+.btn{
+background:#F59E0B;padding:14px 25px;border-radius:10px;
+color:black;text-decoration:none;margin-top:20px;display:inline-block;
 }
 
-.btn {
-background:#F59E0B;
-padding:12px 20px;
-border-radius:10px;
-text-decoration:none;
-color:black;
-display:inline-block;
-margin-top:10px;
+/* SECTION */
+.section{padding:80px 20px;max-width:1100px;margin:auto}
+.grid{display:grid;gap:25px}
+@media(min-width:768px){.grid{grid-template-columns:repeat(3,1fr)}}
+
+/* CARD */
+.card{
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(10px);
+padding:25px;border-radius:16px;
+transition:0.3s;
 }
+.card:hover{transform:translateY(-10px)}
 
 /* WHATSAPP */
-.whatsapp {
-position:fixed; bottom:20px; right:20px;
-background:#25D366;
-color:white; width:60px; height:60px;
-display:flex; justify-content:center;
-align-items:center; border-radius:50%;
-font-size:28px;
+.whatsapp{
+position:fixed;bottom:20px;right:20px;
+background:#25D366;width:65px;height:65px;
+display:flex;align-items:center;justify-content:center;
+border-radius:50%;color:white;font-size:28px;
+animation:pulse 2s infinite;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-.menu { display:none; flex-direction:column; background:white; position:absolute; top:70px; right:20px; padding:20px; }
-.menu.show { display:flex; }
-.hamburger { display:block; }
-}
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1}}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.1)}100%{transform:scale(1)}}
 </style>
-
 </head>
 
 <body>
@@ -74,42 +76,36 @@ font-size:28px;
 <i class="fab fa-whatsapp"></i>
 </a>
 
-<div class="navbar" id="navbar">
+<div class="navbar">
 <div class="logo">
 <img src="https://image2url.com/r2/bucket3/images/1775983872364-c720d0bd-d805-4c37-ab69-1c0bf78f3d99.png">
 <b>RV Travels</b>
 </div>
 
-<div class="menu" id="menu">
+<div class="menu">
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="services.html">Services</a>
 <a href="fleet.html">Fleet</a>
 <a href="contact.html">Contact</a>
 </div>
-
-<div class="hamburger" onclick="toggleMenu()">
-<i class="fas fa-bars"></i>
-</div>
 </div>
 
 <div class="hero">
+<div class="hero-content">
 <h1>Premium Car Rental Service in South Gujarat</h1>
-<p>20+ Years | Clean Cars | On-Time Guarantee | 24/7 Support</p>
+<p>20+ Years • Clean Cars • On-Time Guarantee • 24/7 Support</p>
 <a href="services.html" class="btn">Explore Services</a>
 </div>
+</div>
 
-<script>
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("show");
-}
-
-/* NAVBAR SCROLL EFFECT */
-window.addEventListener("scroll", ()=>{
-document.getElementById("navbar").style.boxShadow =
-window.scrollY > 50 ? "0 4px 20px rgba(0,0,0,0.1)" : "none";
-});
-</script>
+<div class="section">
+<div class="grid">
+<div class="card">✔ 20+ Years Experience</div>
+<div class="card">✔ Professional Drivers</div>
+<div class="card">✔ Clean Cars</div>
+</div>
+</div>
 
 </body>
 </html>
