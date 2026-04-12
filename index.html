@@ -1,293 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RV Travels</title>
 
-<title>RV Travels | Premium Car Rental</title>
-
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-body {
-  font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
-  background:#f8fafc;
+body { font-family:Poppins; margin:0; }
+
+/* NAVBAR */
+.navbar {
+display:flex; justify-content:space-between;
+padding:15px 20px; background:white;
+position:sticky; top:0; z-index:1000;
+box-shadow:0 4px 20px rgba(0,0,0,0.05);
 }
 
-/* NAV */
-.nav {
-  position: fixed;
-  width: 100%;
-  background: rgba(255,255,255,0.9);
-  backdrop-filter: blur(10px);
-  display:flex;
-  justify-content:space-between;
-  padding:15px 25px;
-  z-index:1000;
-}
+.logo { display:flex; gap:10px; align-items:center; }
 
-.menu {
-  display:flex;
-  gap:15px;
-}
+.logo img { width:45px; }
+
+.menu { display:flex; gap:20px; }
 
 .menu a {
-  font-weight:500;
+text-decoration:none;
+color:#1e40af;
+font-weight:600;
 }
 
-/* MOBILE MENU */
-.hamburger {
-  display:none;
-  font-size:24px;
-  cursor:pointer;
-}
-
-@media(max-width:768px){
-  .menu {
-    position:absolute;
-    top:60px;
-    right:0;
-    background:white;
-    flex-direction:column;
-    width:200px;
-    display:none;
-    padding:20px;
-    box-shadow:0 10px 20px rgba(0,0,0,0.1);
-  }
-  .menu.show { display:flex; }
-  .hamburger { display:block; }
-}
+.hamburger { display:none; cursor:pointer; }
 
 /* HERO */
 .hero {
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  background:linear-gradient(135deg,#1E40AF,#3B82F6);
-  color:white;
-  padding:20px;
+background:linear-gradient(135deg,#1e40af,#3b82f6);
+color:white; text-align:center;
+padding:120px 20px;
 }
 
-/* BUTTON */
 .btn {
-  background:#F59E0B;
-  padding:12px 25px;
-  border-radius:8px;
-  margin-top:20px;
-  font-weight:600;
-  transition:0.3s;
-}
-
-.btn:hover {
-  transform:translateY(-3px);
-}
-
-/* SECTIONS */
-section {
-  padding:80px 20px;
-  max-width:1100px;
-  margin:auto;
-}
-
-/* GRID */
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-/* CARDS */
-.card {
-  background:white;
-  padding:20px;
-  border-radius:12px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.05);
-  transition:0.4s;
-}
-
-.card:hover {
-  transform:translateY(-10px);
-}
-
-/* IMAGE FIX */
-.img-wrap {
-  height:220px;
-  overflow:hidden;
-  border-radius:12px;
-}
-
-.img-wrap img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:0.6s;
-}
-
-.card:hover img {
-  transform:scale(1.1);
+background:#F59E0B;
+padding:12px 20px;
+border-radius:10px;
+text-decoration:none;
+color:black;
+display:inline-block;
+margin-top:10px;
 }
 
 /* WHATSAPP */
 .whatsapp {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  width:65px;
-  height:65px;
-  border-radius:50%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:28px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+position:fixed; bottom:20px; right:20px;
+background:#25D366;
+color:white; width:60px; height:60px;
+display:flex; justify-content:center;
+align-items:center; border-radius:50%;
+font-size:28px;
 }
 
-/* ANIMATION */
-.fade {
-  opacity:0;
-  transform:translateY(40px);
-  transition:0.6s;
-}
-.fade.show {
-  opacity:1;
-  transform:translateY(0);
+/* MOBILE */
+@media(max-width:768px){
+.menu { display:none; flex-direction:column; background:white; position:absolute; top:70px; right:20px; padding:20px; }
+.menu.show { display:flex; }
+.hamburger { display:block; }
 }
 </style>
+
 </head>
 
 <body>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/919825656444?text=Hi!%20Can%20I%20know%20charges%20for%20booking%20a%20car?" class="whatsapp">💬</a>
+<a href="https://wa.me/919825656444?text=Hi!%20Can%20I%20know%20charges%20for%20booking%20a%20car?" class="whatsapp">
+<i class="fab fa-whatsapp"></i>
+</a>
 
-<!-- NAV -->
-<div class="nav">
-<div><b>RV Travels</b></div>
+<div class="navbar" id="navbar">
+<div class="logo">
+<img src="https://image2url.com/r2/bucket3/images/1775983872364-c720d0bd-d805-4c37-ab69-1c0bf78f3d99.png">
+<b>RV Travels</b>
+</div>
 
 <div class="menu" id="menu">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#fleet">Fleet</a>
-<a href="#contact">Contact</a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="fleet.html">Fleet</a>
+<a href="contact.html">Contact</a>
 </div>
 
-<div class="hamburger" onclick="toggleMenu()">☰</div>
+<div class="hamburger" onclick="toggleMenu()">
+<i class="fas fa-bars"></i>
+</div>
 </div>
 
-<!-- HERO -->
-<div id="home" class="hero">
-<h1 class="text-4xl md:text-6xl font-bold">Premium Car Rental Service in South Gujarat</h1>
-
-<p class="mt-4">20+ Years of Trusted Service | Clean Cars | On-Time Guarantee | 24/7 Support</p>
-<p class="mt-2">1000+ Happy Customers | Serving Since 2004</p>
-
-<a href="https://wa.me/919825656444?text=Hi!%20Can%20I%20know%20charges%20for%20booking%20a%20car?" class="btn">
-Book on WhatsApp
-</a>
+<div class="hero">
+<h1>Premium Car Rental Service in South Gujarat</h1>
+<p>20+ Years | Clean Cars | On-Time Guarantee | 24/7 Support</p>
+<a href="services.html" class="btn">Explore Services</a>
 </div>
-
-<!-- ABOUT -->
-<section id="about" class="fade">
-<h2 class="text-3xl font-bold mb-4">About Us</h2>
-<p>
-RV Travels has been providing reliable and professional car rental services since 2004. 
-We focus on clean vehicles, punctual service, and customer satisfaction.
-</p>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="fade">
-<h2 class="text-3xl font-bold mb-6">Our Services</h2>
-
-<div class="grid">
-
-<div class="card"><h3>🚗 Local Travel</h3><p>Comfortable rides across Navsari, Surat & nearby areas.</p></div>
-<div class="card"><h3>✈️ Airport Transfers</h3><p>On-time pickup & drop services.</p></div>
-<div class="card"><h3>🌍 Outstation Trips</h3><p>Pan-India travel with experienced drivers.</p></div>
-<div class="card"><h3>💍 Marriage & Events</h3><p>Dedicated cars for weddings.</p></div>
-<div class="card"><h3>💼 Corporate Travel</h3><p>Professional business transport.</p></div>
-<div class="card"><h3>🚗 Monthly Rentals</h3><p>Flexible plans (2500–3000 km).</p></div>
-
-</div>
-</section>
-
-<!-- FLEET -->
-<section id="fleet" class="fade">
-<h2 class="text-3xl font-bold mb-6">Our Fleet</h2>
-
-<div class="grid">
-
-<div class="card">
-<div class="img-wrap">
-<img src="https://image2url.com/r2/bucket1/images/1775992359618-391829ed-e502-40b8-92e6-f7de0b3ea23a.webp">
-</div>
-<h3 class="mt-2 font-bold">Maruti Dzire</h3>
-<p>₹12/km</p>
-</div>
-
-<div class="card">
-<div class="img-wrap">
-<img src="https://image2url.com/r2/bucket2/images/1775983699291-4caa7411-becc-4f3c-b878-327a3d505891.jpeg">
-</div>
-<h3 class="mt-2 font-bold">Maruti Ertiga</h3>
-<p>₹14/km</p>
-</div>
-
-<div class="card">
-<div class="img-wrap">
-<img src="https://image2url.com/r2/bucket2/images/1775983694411-41b4e690-b1cd-4317-b7e3-06529677af1b.jpeg">
-</div>
-<h3 class="mt-2 font-bold">Kia Carens</h3>
-<p>₹16/km</p>
-</div>
-
-<div class="card">
-<div class="img-wrap">
-<img src="https://image2url.com/r2/bucket1/images/1775992358659-447709c2-61c8-4fe7-8459-bee434ae87b3.avif">
-</div>
-<h3 class="mt-2 font-bold">Toyota Innova</h3>
-<p>₹18/km</p>
-</div>
-
-</div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="fade">
-<h2 class="text-3xl font-bold mb-4">Contact Us</h2>
-
-<p>📍 F-1, Old Baug, Charpul Road, Navsari</p>
-<p>📞 99789 56444</p>
-<p>💬 WhatsApp: 98256 56444</p>
-
-<a href="tel:9978956444" class="btn">Call Now</a>
-</section>
 
 <script>
-// MOBILE MENU
 function toggleMenu(){
-  document.getElementById("menu").classList.toggle("show");
+document.getElementById("menu").classList.toggle("show");
 }
 
-// SCROLL ANIMATION
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
-  });
-});
-
-document.querySelectorAll(".fade").forEach(el=>{
-  observer.observe(el);
+/* NAVBAR SCROLL EFFECT */
+window.addEventListener("scroll", ()=>{
+document.getElementById("navbar").style.boxShadow =
+window.scrollY > 50 ? "0 4px 20px rgba(0,0,0,0.1)" : "none";
 });
 </script>
 
