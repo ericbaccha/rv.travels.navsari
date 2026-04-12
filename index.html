@@ -12,74 +12,59 @@ body{margin:0;font-family:Poppins;background:#f8fafc}
 
 /* NAVBAR */
 .navbar{
-position:fixed;width:100%;top:0;
+position:fixed;top:0;width:100%;
 display:flex;justify-content:space-between;align-items:center;
-padding:15px 25px;
-background:rgba(255,255,255,0.7);
-backdrop-filter:blur(12px);
-z-index:1000;
+padding:15px 20px;
+background:rgba(255,255,255,0.9);
+backdrop-filter:blur(10px);
+z-index:9999;
 }
+.logo{display:flex;align-items:center;gap:10px;font-weight:600;color:#1e40af}
+.logo img{width:40px;height:40px}
+.menu a{margin-left:15px;text-decoration:none;color:#1e40af;font-weight:500}
 
-.logo{display:flex;gap:10px;align-items:center}
-.logo img{width:45px}
-
-.menu{display:flex;gap:25px}
-.menu a{color:#1e40af;text-decoration:none;font-weight:500}
+/* FIX OVERLAP */
+.page{padding-top:90px}
 
 /* HERO */
 .hero{
-height:100vh;
+height:90vh;
 background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') center/cover;
 display:flex;align-items:center;justify-content:center;
 text-align:center;color:white;position:relative;
 }
-.hero::before{
-content:'';position:absolute;inset:0;background:rgba(0,0,0,0.6);
-}
-.hero-content{position:relative;max-width:700px;animation:fadeUp 1s}
+.hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.6)}
+.hero-content{position:relative}
+
+/* BUTTON */
 .btn{
-background:#F59E0B;padding:14px 25px;border-radius:10px;
-color:black;text-decoration:none;margin-top:20px;display:inline-block;
+background:#F59E0B;padding:12px 22px;border-radius:8px;
+text-decoration:none;color:black;font-weight:600
 }
-
-/* SECTION */
-.section{padding:80px 20px;max-width:1100px;margin:auto}
-.grid{display:grid;gap:25px}
-@media(min-width:768px){.grid{grid-template-columns:repeat(3,1fr)}}
-
-/* CARD */
-.card{
-background:rgba(255,255,255,0.7);
-backdrop-filter:blur(10px);
-padding:25px;border-radius:16px;
-transition:0.3s;
-}
-.card:hover{transform:translateY(-10px)}
 
 /* WHATSAPP */
 .whatsapp{
 position:fixed;bottom:20px;right:20px;
-background:#25D366;width:65px;height:65px;
+width:65px;height:65px;background:#25D366;
 display:flex;align-items:center;justify-content:center;
 border-radius:50%;color:white;font-size:28px;
-animation:pulse 2s infinite;
+z-index:9999;
 }
 
-@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1}}
-@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.1)}100%{transform:scale(1)}}
+/* MOBILE */
+@media(max-width:768px){
+.menu{display:none}
+}
 </style>
 </head>
 
 <body>
 
-<a href="https://wa.me/919825656444?text=Hi!%20Can%20I%20know%20charges%20for%20booking%20a%20car?" class="whatsapp">
-<i class="fab fa-whatsapp"></i>
-</a>
-
+<!-- NAVBAR -->
 <div class="navbar">
 <div class="logo">
 <img src="https://image2url.com/r2/bucket3/images/1775983872364-c720d0bd-d805-4c37-ab69-1c0bf78f3d99.png">
-<b>RV Travels</b>
+<span>RV Travels</span>
 </div>
 
 <div class="menu">
@@ -91,21 +76,22 @@ animation:pulse 2s infinite;
 </div>
 </div>
 
+<div class="page">
+
 <div class="hero">
 <div class="hero-content">
 <h1>Premium Car Rental Service in South Gujarat</h1>
 <p>20+ Years • Clean Cars • On-Time Guarantee • 24/7 Support</p>
-<a href="services.html" class="btn">Explore Services</a>
+<br>
+<a href="services.html" class="btn">View Services</a>
 </div>
 </div>
 
-<div class="section">
-<div class="grid">
-<div class="card">✔ 20+ Years Experience</div>
-<div class="card">✔ Professional Drivers</div>
-<div class="card">✔ Clean Cars</div>
 </div>
-</div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/919825656444?text=Hi!%20Can%20I%20know%20charges%20for%20booking%20a%20car?"
+class="whatsapp"><i class="fab fa-whatsapp"></i></a>
 
 </body>
 </html>
