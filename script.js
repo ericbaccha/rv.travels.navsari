@@ -1,20 +1,25 @@
+// mobile menu
 const btn = document.getElementById("menu-btn");
-const menu = document.getElementById("mobile-menu");
+const mobile = document.getElementById("mobile-menu");
 
 if(btn){
-btn.addEventListener("click",()=>{
-menu.classList.toggle("active");
-});
+btn.onclick = () => mobile.classList.toggle("active");
 }
 
-// scroll animation
-const cards = document.querySelectorAll(".card");
+const elements = document.querySelectorAll(".card, .contact-box");
 
-window.addEventListener("scroll", ()=>{
-cards.forEach(card=>{
-const top = card.getBoundingClientRect().top;
+function showOnScroll(){
+elements.forEach(el=>{
+const top = el.getBoundingClientRect().top;
+
 if(top < window.innerHeight - 80){
-card.classList.add("show");
+el.classList.add("show");
 }
 });
-});
+}
+
+// run on load
+window.addEventListener("load", showOnScroll);
+
+// run on scroll
+window.addEventListener("scroll", showOnScroll);
