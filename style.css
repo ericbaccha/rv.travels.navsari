@@ -1,8 +1,8 @@
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
-  font-family:'Poppins',sans-serif;
-  background:#f9fafb;
+  font-family:'Inter',sans-serif;
+  background:#f8fafc;
   color:#111827;
   line-height:1.6;
 }
@@ -12,12 +12,12 @@ body{
   position:fixed;
   top:0;
   width:100%;
-  background:white;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(10px);
   padding:15px 40px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  box-shadow:0 4px 20px rgba(0,0,0,0.05);
   z-index:9999;
 }
 
@@ -50,12 +50,12 @@ body{
   justify-content:center;
   text-align:center;
   color:white;
-  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+  background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
   url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') center/cover;
 }
 
-.hero h1{font-size:42px}
-.hero p{margin-top:10px}
+.hero h1{font-size:42px;max-width:850px}
+.hero p{margin-top:12px}
 
 /* SECTION */
 .section{padding:70px 20px}
@@ -65,17 +65,18 @@ body{
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:25px;
+  gap:30px;
 }
 
 /* CARD */
 .card{
   background:white;
-  border-radius:16px;
+  border-radius:14px;
   overflow:hidden;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
-  transition:0.3s;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.4s;
 }
+
 .card:hover{transform:translateY(-8px)}
 
 .card img{
@@ -86,18 +87,16 @@ body{
 
 .card-body{padding:20px}
 
-.price{color:#F59E0B;font-weight:600}
+.card ul{padding-left:18px;margin-top:10px}
 
-/* LIST */
-ul{margin-top:10px}
-li{margin-bottom:6px}
+.price{color:#F59E0B;font-weight:600}
 
 /* BUTTON */
 .btn{
   display:inline-block;
   margin-top:15px;
   background:#F59E0B;
-  padding:10px 20px;
+  padding:12px 22px;
   border-radius:8px;
   text-decoration:none;
   color:black;
@@ -132,14 +131,9 @@ li{margin-bottom:6px}
 .fade{
   opacity:0;
   transform:translateY(30px);
-  transition:0.6s;
+  transition:0.8s;
 }
 .fade.show{
   opacity:1;
   transform:translateY(0);
-}
-
-@media(max-width:768px){
-  .menu{display:none}
-  .hero h1{font-size:30px}
 }
