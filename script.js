@@ -1,20 +1,20 @@
-// MOBILE MENU
 const btn = document.getElementById("menu-btn");
-const menu = document.getElementById("menu");
+const menu = document.getElementById("mobile-menu");
 
 if(btn){
-  btn.addEventListener("click", ()=>{
-    menu.classList.toggle("show");
-  });
+btn.addEventListener("click",()=>{
+menu.classList.toggle("active");
+});
 }
 
-// FAST FADE
-const faders = document.querySelectorAll(".fade");
+// scroll animation
+const cards = document.querySelectorAll(".card");
 
 window.addEventListener("scroll", ()=>{
-  faders.forEach(el=>{
-    if(el.getBoundingClientRect().top < window.innerHeight - 40){
-      el.classList.add("show");
-    }
-  });
+cards.forEach(card=>{
+const top = card.getBoundingClientRect().top;
+if(top < window.innerHeight - 100){
+card.classList.add("show");
+}
+});
 });
