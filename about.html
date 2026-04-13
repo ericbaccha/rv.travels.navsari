@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>About - RV Travels</title>
+<title>RV Travels</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<style>
+
+/* HERO */
+.hero{
+  height:85vh;
+  background:url('https://www.image2url.com/r2/default/images/1776075617250-68815e7f-076b-444b-85f5-d1be4a32a443.jpg') center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  color:white;
+}
+
+.hero::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+  position:relative;
+  max-width:700px;
+  padding:20px;
+}
+
+.hero h1{
+  font-size:26px;
+  font-weight:600;
+}
+
+.hero p{
+  margin-top:10px;
+  font-size:14px;
+}
+
+.hero .btn{
+  margin-top:20px;
+}
+
+</style>
+
 </head>
 
 <body>
@@ -28,66 +72,19 @@
   <div class="menu-btn" id="menu-btn">☰</div>
 </div>
 
-<div class="page">
-
 <!-- HERO -->
 <div class="hero">
-  <div>
-    <h1>About RV Travels</h1>
-    <p>Trusted Car Rental Service Since 2004</p>
+  <div class="hero-content">
+    <h1>Premium Car Rental Service in South Gujarat with Professional Drivers</h1>
+    <p>20+ Years of Trusted Service | Clean Cars | On-Time Guarantee | 24/7 Support</p>
+    <p>1000+ Happy Customers | Serving Since 2004</p>
+
+    <a href="services.html" class="btn btn-primary">View Services</a>
   </div>
 </div>
 
-<!-- CONTENT -->
-<div class="section container fade">
-
-<h2>Who We Are</h2>
-
-<p>
-RV Travels, founded in 2004 by Eric Baccha, is a trusted and reliable car rental service based in Navsari, South Gujarat.
-With over 20+ years of experience, we have proudly served 1000+ satisfied customers with safe, comfortable, and professional travel solutions.
-</p>
-
-<br>
-
-<p>
-We specialize in providing premium transportation services including local travel, airport transfers, outstation journeys, corporate travel, and event transportation.
-Our focus is on delivering a smooth, stress-free travel experience with clean vehicles and experienced drivers.
-</p>
-
-<br>
-
-<h2>Why Choose Us</h2>
-
-<ul>
-<li>✔ 20+ Years of Trusted Service</li>
-<li>✔ 1000+ Happy Customers</li>
-<li>✔ Clean & Well-Maintained Vehicles</li>
-<li>✔ Professional & Experienced Drivers</li>
-<li>✔ On-Time Guarantee</li>
-<li>✔ 24/7 Customer Support</li>
-</ul>
-
-<br>
-
-<h2>Our Mission</h2>
-
-<p>
-Our mission is to provide reliable, comfortable, and affordable transportation services while maintaining the highest standards of professionalism and customer satisfaction.
-</p>
-
-</div>
-
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-© RV Travels • Navsari • Since 2004
-</div>
-
-<!-- WHATSAPP -->
 <a href="https://wa.me/919825656444?text=Hi!%20I%20would%20like%20to%20rent%20a%20car" class="whatsapp">💬</a>
-<script src="script.js"></script>
 
+<script src="script.js"></script>
 </body>
 </html>
