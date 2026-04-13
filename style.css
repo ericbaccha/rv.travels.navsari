@@ -1,208 +1,127 @@
 /* RESET */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-font-family:'Inter', sans-serif;
-background:#f5f7fb;
-color:#1f2937;
-line-height:1.6;
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
 }
 
 /* NAVBAR */
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 50px;
-background:white;
-box-shadow:0 8px 25px rgba(0,0,0,0.05);
-position:sticky;
-top:0;
-z-index:1000;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
 }
 
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-font-family:'Poppins', sans-serif;
-font-weight:600;
-font-size:18px;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
 }
 
-.logo img{
-width:38px;
-height:auto;
+.logo img {
+  width: 30px;
 }
 
-.menu{
-display:flex;
-gap:30px;
+.menu a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
 }
 
-.menu a{
-text-decoration:none;
-color:#374151;
-font-weight:500;
-transition:all 0.3s ease;
-position:relative;
-}
-
-/* underline hover */
-.menu a::after{
-content:"";
-position:absolute;
-bottom:-5px;
-left:0;
-width:0;
-height:2px;
-background:#1e40af;
-transition:0.3s;
-}
-
-.menu a:hover::after{
-width:100%;
-}
-
-.menu a:hover{
-color:#1e40af;
+.menu a:hover {
+  color: #1e40af;
 }
 
 /* CONTACT SECTION */
-.contact-section{
-min-height:90vh;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:40px 20px;
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 15px;
 }
 
 /* BOX */
-.contact-box{
-background:white;
-padding:50px 45px;
-border-radius:22px;
-box-shadow:0 25px 60px rgba(0,0,0,0.08);
-max-width:520px;
-width:100%;
-text-align:center;
-transition:0.4s;
+.contact-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  text-align: center;
 }
 
-/* subtle hover lift */
-.contact-box:hover{
-transform:translateY(-6px);
-box-shadow:0 30px 70px rgba(0,0,0,0.1);
+/* TEXT */
+.contact-box h1 {
+  margin-bottom: 10px;
+  font-size: 22px;
 }
 
-/* TITLE */
-.contact-box h1{
-font-family:'Poppins', sans-serif;
-font-size:32px;
-margin-bottom:12px;
-color:#111827;
-}
-
-/* SUBTEXT */
-.sub{
-color:#6b7280;
-font-size:15px;
-margin-bottom:30px;
+.sub {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
 }
 
 /* INFO */
-.info{
-text-align:left;
-margin-top:10px;
+.info p {
+  margin: 10px 0;
+  font-size: 14px;
 }
 
-.info p{
-margin:14px 0;
-font-size:16px;
-display:flex;
-align-items:center;
-gap:8px;
+.info a {
+  color: #1e40af;
+  text-decoration: none;
 }
 
-/* LINKS */
-.info a{
-color:#1e40af;
-font-weight:600;
-text-decoration:none;
-transition:0.2s;
-}
-
-.info a:hover{
-text-decoration:underline;
-color:#1e3a8a;
+.info a:hover {
+  text-decoration: underline;
 }
 
 /* BUTTONS */
-.buttons{
-margin-top:30px;
-display:flex;
-flex-direction:column;
-gap:15px;
+.buttons {
+  margin-top: 20px;
 }
 
-.btn{
-padding:14px;
-border-radius:12px;
-font-weight:600;
-text-decoration:none;
-transition:0.3s;
-display:flex;
-justify-content:center;
-align-items:center;
+.btn {
+  display: block;
+  padding: 12px;
+  margin: 10px 0;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
-/* CALL BUTTON */
-.call{
-background:#1e40af;
-color:white;
+/* CALL */
+.call {
+  background: #1e40af;
+  color: white;
 }
 
-.call:hover{
-background:#1e3a8a;
-transform:translateY(-2px);
-}
-
-/* WHATSAPP BUTTON */
-.whatsapp{
-background:#25D366;
-color:white;
-}
-
-.whatsapp:hover{
-background:#1ebe5d;
-transform:translateY(-2px);
+/* WHATSAPP */
+.whatsapp {
+  background: #25D366;
+  color: white;
 }
 
 /* MOBILE */
-@media(max-width:768px){
+@media (max-width: 600px) {
+  .menu {
+    display: none;
+  }
 
-.navbar{
-padding:15px 20px;
-}
-
-.menu{
-display:none;
-}
-
-.contact-box{
-padding:35px 25px;
-}
-
-.contact-box h1{
-font-size:26px;
-}
-
-.sub{
-font-size:14px;
-}
-
+  .contact-box {
+    padding: 20px;
+  }
 }
