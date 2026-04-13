@@ -1,36 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Fleet</title>
+<title>Fleet - RV Travels</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* EXTRA IMAGE FIX (IMPORTANT) */
+.card img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  border-bottom:1px solid #eee;
+}
+</style>
+
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
-<div class="logo">RV Travels</div>
+  <div class="logo">
+    <img src="https://image2url.com/r2/bucket3/images/1775983872364-c720d0bd-d805-4c37-ab69-1c0bf78f3d99.png">
+    RV Travels
+  </div>
+
+  <div class="menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="fleet.html">Fleet</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </div>
 
 <div class="page section container">
 
-<h1>Our Fleet</h1>
+<h1 class="fade">Our Premium Fleet</h1>
+<p class="fade" style="margin-bottom:30px;color:#6b7280;">
+Well-maintained vehicles for comfortable long-distance and local travel.
+</p>
 
 <div class="grid">
 
+<!-- DZIRE -->
 <div class="card fade">
-<img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d">
+<img src="https://image2url.com/r2/bucket1/images/1775992359618-391829ed-e502-40b8-92e6-f7de0b3ea23a.webp">
 <div class="card-body">
 <h3>Maruti Dzire</h3>
 <p class="price">₹12/km</p>
+<ul>
+<li>4 Seater</li>
+<li>AC</li>
+<li>Best for city & short trips</li>
+</ul>
 </div>
 </div>
 
+<!-- ERTIGA -->
 <div class="card fade">
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+<img src="https://image2url.com/r2/bucket2/images/1775983699291-4caa7411-becc-4f3c-b878-327a3d505891.jpeg">
 <div class="card-body">
 <h3>Maruti Ertiga</h3>
 <p class="price">₹14/km</p>
+<ul>
+<li>7 Seater</li>
+<li>AC</li>
+<li>Family trips</li>
+</ul>
+</div>
+</div>
+
+<!-- CARENS -->
+<div class="card fade">
+<img src="https://image2url.com/r2/bucket2/images/1775983694411-41b4e690-b1cd-4317-b7e3-06529677af1b.jpeg">
+<div class="card-body">
+<h3>Kia Carens</h3>
+<p class="price">₹16/km</p>
+<ul>
+<li>7 Seater</li>
+<li>Premium interior</li>
+<li>Long distance comfort</li>
+</ul>
+</div>
+</div>
+
+<!-- INNOVA -->
+<div class="card fade">
+<img src="https://image2url.com/r2/bucket1/images/1775992358659-447709c2-61c8-4fe7-8459-bee434ae87b3.avif">
+<div class="card-body">
+<h3>Toyota Innova</h3>
+<p class="price">₹18/km</p>
+<ul>
+<li>7 Seater</li>
+<li>Diesel</li>
+<li>Best for highways</li>
+</ul>
 </div>
 </div>
 
@@ -38,8 +106,10 @@
 
 </div>
 
-<a href="https://wa.me/919825656444" class="whatsapp">💬</a>
+<!-- WHATSAPP -->
+<a href="https://wa.me/919825656444?text=Hi%20show%20me%20your%20fleet%20availability" class="whatsapp">💬</a>
 
 <script src="script.js"></script>
+
 </body>
 </html>
