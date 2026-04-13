@@ -9,6 +9,7 @@ body{
 font-family:'Segoe UI', sans-serif;
 background:#f4f6f9;
 color:#1f2937;
+overflow-x:hidden;
 }
 
 /* NAVBAR */
@@ -20,7 +21,7 @@ background:white;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 30px;
+padding:15px 25px;
 box-shadow:0 4px 20px rgba(0,0,0,0.05);
 z-index:1000;
 }
@@ -32,26 +33,25 @@ gap:8px;
 font-weight:600;
 }
 
-.logo img{ width:32px; }
+.logo img{
+width:34px;
+}
 
 .menu{
 display:flex;
-gap:25px;
+gap:20px;
 }
 
 .menu a{
 text-decoration:none;
 color:#333;
 font-weight:500;
-transition:0.3s;
 }
 
-.menu a:hover{ color:#1e40af; }
-
-/* MOBILE */
+/* MOBILE MENU */
 .menu-btn{
 display:none;
-font-size:24px;
+font-size:26px;
 cursor:pointer;
 }
 
@@ -59,28 +59,50 @@ cursor:pointer;
 display:none;
 flex-direction:column;
 background:white;
-position:absolute;
-top:60px;
+position:fixed;
+top:70px;
 left:0;
 width:100%;
-padding:15px;
+padding:20px;
+z-index:999;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
 .mobile-menu a{
-padding:10px 0;
+padding:12px 0;
+border-bottom:1px solid #eee;
 text-decoration:none;
 color:#333;
 }
 
-.mobile-menu.active{ display:flex; }
+.mobile-menu.active{
+display:flex;
+}
 
 /* HERO */
 .hero{
 margin-top:70px;
-padding:80px 20px;
+height:85vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-background:#1e3a8a;
 color:white;
+padding:20px;
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+.hero h1{
+font-size:38px;
+margin-bottom:10px;
+}
+
+.hero p{
+max-width:500px;
 }
 
 /* SECTION */
@@ -103,11 +125,11 @@ background:white;
 padding:20px;
 border-radius:12px;
 box-shadow:0 10px 25px rgba(0,0,0,0.05);
+transition:0.4s;
 
-/* animation initial state */
+/* animation */
 opacity:0;
-transform:translateY(40px);
-transition:0.6s ease;
+transform:translateY(30px);
 }
 
 .card.show{
@@ -126,16 +148,16 @@ margin-bottom:10px;
 /* CONTACT BOX */
 .contact-box{
 background:white;
-padding:30px;
+padding:25px;
 border-radius:15px;
-max-width:420px;
-margin:100px auto;
+max-width:400px;
+margin:120px auto 40px;
 text-align:center;
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
 
+/* animation */
 opacity:0;
-transform:translateY(40px);
-transition:0.6s;
+transform:translateY(30px);
 }
 
 .contact-box.show{
@@ -143,7 +165,6 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* BUTTONS */
 .buttons{
 display:flex;
 gap:10px;
@@ -157,14 +178,35 @@ border-radius:8px;
 text-decoration:none;
 text-align:center;
 font-weight:600;
-transition:0.3s;
 }
 
-.call{ background:#1e40af; color:white; }
-.whatsapp{ background:#25D366; color:white; }
+.call{
+background:#1e40af;
+color:white;
+}
 
-.btn:hover{
-transform:translateY(-2px);
+.whatsapp{
+background:#25D366;
+color:white;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:26px;
+color:white;
+text-decoration:none;
+z-index:1000;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
 /* FOOTER */
@@ -173,10 +215,35 @@ background:#1e3a8a;
 color:white;
 text-align:center;
 padding:15px;
+margin-top:40px;
 }
 
 /* MOBILE */
 @media(max-width:768px){
-.menu{ display:none; }
-.menu-btn{ display:block; }
+
+.menu{
+display:none;
+}
+
+.menu-btn{
+display:block;
+}
+
+.hero{
+height:auto;
+padding:120px 20px 60px;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.contact-box{
+margin-top:100px;
+}
+
+.buttons{
+flex-direction:column;
+}
+
 }
