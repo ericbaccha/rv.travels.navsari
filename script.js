@@ -1,4 +1,3 @@
-// SCROLL ANIMATION
 const faders = document.querySelectorAll(".fade");
 
 window.addEventListener("scroll", () => {
