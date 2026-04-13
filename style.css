@@ -13,7 +13,7 @@ body{
   top:0;
   width:100%;
   background:white;
-  padding:14px 40px;
+  padding:15px 40px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -40,7 +40,6 @@ body{
 
 .menu a:hover{color:#1E40AF}
 
-/* PAGE */
 .page{padding-top:90px}
 
 /* HERO */
@@ -58,19 +57,7 @@ body{
 .hero h1{font-size:42px}
 .hero p{margin-top:10px}
 
-/* BUTTON */
-.btn{
-  display:inline-block;
-  margin-top:20px;
-  background:#F59E0B;
-  padding:12px 25px;
-  border-radius:8px;
-  text-decoration:none;
-  color:black;
-  font-weight:600;
-}
-
-/* SECTIONS */
+/* SECTION */
 .section{padding:70px 20px}
 .container{max-width:1100px;margin:auto}
 
@@ -101,6 +88,22 @@ body{
 
 .price{color:#F59E0B;font-weight:600}
 
+/* LIST */
+ul{margin-top:10px}
+li{margin-bottom:6px}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  background:#F59E0B;
+  padding:10px 20px;
+  border-radius:8px;
+  text-decoration:none;
+  color:black;
+  font-weight:600;
+}
+
 /* FOOTER */
 .footer{
   background:#111827;
@@ -125,9 +128,18 @@ body{
   font-size:26px;
 }
 
-/* MOBILE */
+/* ANIMATION */
+.fade{
+  opacity:0;
+  transform:translateY(30px);
+  transition:0.6s;
+}
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
 @media(max-width:768px){
-  .hero h1{font-size:30px}
-  .navbar{padding:15px 20px}
   .menu{display:none}
+  .hero h1{font-size:30px}
 }
