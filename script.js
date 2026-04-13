@@ -6,20 +6,17 @@ if(btn){
 btn.onclick = () => mobile.classList.toggle("active");
 }
 
+// animations
 const elements = document.querySelectorAll(".card, .contact-box");
 
-function showOnScroll(){
+function animate(){
 elements.forEach(el=>{
 const top = el.getBoundingClientRect().top;
-
 if(top < window.innerHeight - 80){
 el.classList.add("show");
 }
 });
 }
 
-// run on load
-window.addEventListener("load", showOnScroll);
-
-// run on scroll
-window.addEventListener("scroll", showOnScroll);
+window.addEventListener("load", animate);
+window.addEventListener("scroll", animate);
