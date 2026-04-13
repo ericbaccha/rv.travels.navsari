@@ -1,3 +1,4 @@
+/* RESET */
 *{
 margin:0;
 padding:0;
@@ -31,9 +32,7 @@ gap:8px;
 font-weight:600;
 }
 
-.logo img{
-width:32px;
-}
+.logo img{ width:32px; }
 
 .menu{
 display:flex;
@@ -44,11 +43,10 @@ gap:25px;
 text-decoration:none;
 color:#333;
 font-weight:500;
+transition:0.3s;
 }
 
-.menu a:hover{
-color:#1e40af;
-}
+.menu a:hover{ color:#1e40af; }
 
 /* MOBILE */
 .menu-btn{
@@ -74,9 +72,7 @@ text-decoration:none;
 color:#333;
 }
 
-.mobile-menu.active{
-display:flex;
-}
+.mobile-menu.active{ display:flex; }
 
 /* HERO */
 .hero{
@@ -107,6 +103,16 @@ background:white;
 padding:20px;
 border-radius:12px;
 box-shadow:0 10px 25px rgba(0,0,0,0.05);
+
+/* animation initial state */
+opacity:0;
+transform:translateY(40px);
+transition:0.6s ease;
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .card img{
@@ -126,8 +132,18 @@ max-width:420px;
 margin:100px auto;
 text-align:center;
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
 }
 
+.contact-box.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* BUTTONS */
 .buttons{
 display:flex;
 gap:10px;
@@ -141,10 +157,15 @@ border-radius:8px;
 text-decoration:none;
 text-align:center;
 font-weight:600;
+transition:0.3s;
 }
 
 .call{ background:#1e40af; color:white; }
 .whatsapp{ background:#25D366; color:white; }
+
+.btn:hover{
+transform:translateY(-2px);
+}
 
 /* FOOTER */
 footer{
