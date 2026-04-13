@@ -1,80 +1,101 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Fleet | RV Travels</title>
+<title>Fleet - RV Travels</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
-<style>
-body { font-family:Poppins; margin:0; background:#f8fafc; }
-
-.section {
-max-width:1100px;
-margin:auto;
-padding:60px 20px;
-}
-
-.grid {
-display:grid;
-gap:20px;
-}
-
-@media(min-width:768px){
-.grid { grid-template-columns:repeat(2,1fr); }
-}
-
-.card {
-background:white;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
-}
-
-img {
-width:100%;
-height:230px;
-object-fit:cover;
-}
-
-.info {
-padding:15px;
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="section grid">
+<!-- NAVBAR -->
+<div class="navbar">
+<div class="logo">
+<img src="https://image2url.com/r2/bucket3/images/1775983872364-c720d0bd-d805-4c37-ab69-1c0bf78f3d99.png">
+RV Travels
+</div>
 
+<div class="menu">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="fleet.html">Fleet</a>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+
+<div class="page">
+
+<div class="section">
+<div class="container">
+
+<h1>Our Premium Fleet</h1>
+<p>Clean, well-maintained vehicles with professional drivers</p>
+<br>
+
+<div class="grid">
+
+<!-- DZIRE -->
 <div class="card">
-<img src="https://image2url.com/r2/bucket1/images/1775992359618-391829ed-e502-40b8-92e6-f7de0b3ea23a.webp">
-<div class="info">
-<b>Maruti Dzire</b><br>₹12/km
+<img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d">
+<div class="card-body">
+<h3>Maruti Dzire (5-Seater)</h3>
+<p class="price">₹12/km</p>
+<p>Includes toll, tax & driver</p>
+<br>
+<a href="https://wa.me/919825656444?text=Hi%20I%20want%20to%20book%20Dzire" class="btn">Book on WhatsApp</a>
 </div>
 </div>
 
+<!-- ERTIGA -->
 <div class="card">
-<img src="https://image2url.com/r2/bucket2/images/1775983699291-4caa7411-becc-4f3c-b878-327a3d505891.jpeg">
-<div class="info">
-<b>Maruti Ertiga</b><br>₹14/km
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+<div class="card-body">
+<h3>Maruti Ertiga (7-Seater)</h3>
+<p class="price">₹14/km</p>
+<br>
+<a href="https://wa.me/919825656444?text=Hi%20I%20want%20to%20book%20Ertiga" class="btn">Book on WhatsApp</a>
 </div>
 </div>
 
+<!-- CARENS -->
 <div class="card">
-<img src="https://image2url.com/r2/bucket2/images/1775983694411-41b4e690-b1cd-4317-b7e3-06529677af1b.jpeg">
-<div class="info">
-<b>Kia Carens</b><br>₹16/km
+<img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
+<div class="card-body">
+<h3>Kia Carens (7-Seater)</h3>
+<p class="price">₹16/km</p>
+<br>
+<a href="https://wa.me/919825656444?text=Hi%20I%20want%20to%20book%20Kia%20Carens" class="btn">Book on WhatsApp</a>
 </div>
 </div>
 
+<!-- INNOVA -->
 <div class="card">
-<img src="https://image2url.com/r2/bucket1/images/1775992358659-447709c2-61c8-4fe7-8459-bee434ae87b3.avif">
-<div class="info">
-<b>Toyota Innova</b><br>₹18/km
+<img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b">
+<div class="card-body">
+<h3>Toyota Innova (7-Seater)</h3>
+<p class="price">₹18/km</p>
+<br>
+<a href="https://wa.me/919825656444?text=Hi%20I%20want%20to%20book%20Innova" class="btn">Book on WhatsApp</a>
 </div>
 </div>
 
 </div>
+
+</div>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+100% Clean Cars • Professional Drivers • On-Time Service
+</div>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/919825656444?text=Hi%20RV%20Travels!%20Please%20share%20available%20cars." class="whatsapp">💬</a>
 
 </body>
 </html>
