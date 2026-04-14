@@ -1,5 +1,4 @@
-
-/* GOOGLE FONT */
+/* FONT */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
 /* RESET */
@@ -13,8 +12,7 @@ body{
 font-family:'Inter', sans-serif;
 background:#f5f7fb;
 color:#1f2937;
-padding-top:70px; /* fixes navbar overlap */
-overflow-x:hidden;
+padding-top:70px;
 }
 
 /* NAVBAR */
@@ -94,7 +92,6 @@ justify-content:center;
 text-align:center;
 padding:60px 20px;
 color:#fff;
-
 background-size:cover;
 background-position:center;
 position:relative;
@@ -115,26 +112,42 @@ position:relative;
 z-index:2;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section{
 padding:60px 20px;
 max-width:1100px;
 margin:auto;
 }
 
-/* GRID */
+/* ✅ FIXED GRID (NO AUTO BREAK) */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(3, 1fr);
+gap:25px;
 }
 
-/* CARDS */
+/* RESPONSIVE GRID */
+@media(max-width:900px){
+.grid{
+grid-template-columns:repeat(2, 1fr);
+}
+}
+
+@media(max-width:600px){
+.grid{
+grid-template-columns:1fr;
+}
+}
+
+/* CARD */
 .card{
 background:#fff;
 padding:20px;
 border-radius:12px;
 box-shadow:0 8px 20px rgba(0,0,0,0.06);
+display:flex;
+flex-direction:column;
+justify-content:space-between;
 transition:0.3s;
 }
 
@@ -148,6 +161,19 @@ height:200px;
 object-fit:cover;
 border-radius:10px;
 margin-bottom:10px;
+}
+
+/* TEXT FIX */
+.card h3{
+font-size:18px;
+margin-bottom:8px;
+font-weight:600;
+}
+
+.card p{
+font-size:14px;
+line-height:1.6;
+color:#555;
 }
 
 /* CONTACT */
@@ -186,7 +212,7 @@ background:#25D366;
 color:#fff;
 }
 
-/* 🚀 WHATSAPP FLOAT (MAIN FIX) */
+/* WHATSAPP FLOAT */
 .whatsapp-float{
 position:fixed;
 bottom:20px;
@@ -195,35 +221,21 @@ width:60px;
 height:60px;
 background:#25D366;
 border-radius:50%;
-
 display:flex;
 align-items:center;
 justify-content:center;
-
 z-index:9999;
 box-shadow:0 8px 20px rgba(0,0,0,0.2);
-
-transition:0.3s;
-}
-
-.whatsapp-float:hover{
-transform:scale(1.1);
-}
-
-/* SVG INSIDE BUTTON */
-.whatsapp-float svg{
-width:28px;
-height:28px;
 }
 
 /* ANIMATION (SAFE) */
-.animate{
+.fade-in{
 opacity:0;
-transform:translateY(40px);
-transition:all 0.6s ease;
+transform:translateY(25px);
+transition:0.5s ease;
 }
 
-.animate.show{
+.fade-in.show{
 opacity:1;
 transform:translateY(0);
 }
@@ -260,16 +272,4 @@ padding:40px 15px;
 flex-direction:column;
 }
 
-}
-
-/* SMOOTH FADE ANIMATION */
-.fade-in{
-opacity:0;
-transform:translateY(25px);
-transition:opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-in.show{
-opacity:1;
-transform:translateY(0);
 }
