@@ -1,3 +1,4 @@
+/* RESET */
 *{
 margin:0;
 padding:0;
@@ -30,6 +31,7 @@ display:flex;
 align-items:center;
 gap:10px;
 font-weight:600;
+font-size:18px;
 }
 
 .logo img{
@@ -45,6 +47,11 @@ gap:25px;
 text-decoration:none;
 color:#333;
 font-weight:500;
+transition:0.3s;
+}
+
+.menu a:hover{
+color:#1e40af;
 }
 
 .menu-btn{
@@ -88,6 +95,7 @@ margin-bottom:10px;
 
 .hero p{
 font-size:16px;
+line-height:1.6;
 }
 
 /* SECTION */
@@ -101,6 +109,7 @@ text-align:center;
 .section h1,
 .section h2{
 margin-bottom:25px;
+font-weight:600;
 }
 
 /* GRID */
@@ -113,14 +122,15 @@ gap:25px;
 /* CARD */
 .card{
 background:white;
-border-radius:12px;
+border-radius:14px;
 padding:20px;
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
 transition:0.3s;
+text-align:left;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
 .card img{
@@ -131,6 +141,43 @@ border-radius:10px;
 margin-bottom:10px;
 }
 
+.card h3{
+margin-bottom:8px;
+}
+
+.card p{
+font-size:14px;
+color:#555;
+line-height:1.6;
+}
+
+/* SERVICE LIST (NO DOTS, CLEAN LINES) */
+.service-list{
+list-style:none;
+margin-top:10px;
+padding:0;
+}
+
+.service-list li{
+font-size:14px;
+color:#555;
+line-height:1.6;
+margin-bottom:6px;
+position:relative;
+padding-left:14px;
+}
+
+.service-list li::before{
+content:"";
+position:absolute;
+left:0;
+top:8px;
+width:6px;
+height:2px;
+background:#1e40af;
+border-radius:2px;
+}
+
 /* CONTACT BOX */
 .contact-box{
 background:white;
@@ -139,6 +186,7 @@ border-radius:14px;
 max-width:420px;
 margin:30px auto 0;
 box-shadow:0 12px 30px rgba(0,0,0,0.08);
+text-align:center;
 }
 
 .buttons{
@@ -153,6 +201,7 @@ padding:12px;
 border-radius:8px;
 text-decoration:none;
 color:white;
+font-weight:500;
 }
 
 .call{background:#1e40af;}
@@ -161,8 +210,8 @@ color:white;
 /* ANIMATION */
 .reveal{
 opacity:0;
-transform:translateY(40px);
-transition:0.6s ease;
+transform:translateY(50px);
+transition:all 0.7s ease;
 }
 
 .reveal.show{
@@ -180,6 +229,8 @@ z-index:999;
 
 .whatsapp-float img{
 width:55px;
+border-radius:50%;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
 animation:pulse 1.8s infinite;
 }
 
@@ -187,6 +238,16 @@ animation:pulse 1.8s infinite;
 0%{transform:scale(1);}
 50%{transform:scale(1.1);}
 100%{transform:scale(1);}
+}
+
+/* FOOTER */
+.footer{
+background:#2d4a9e;
+color:white;
+text-align:center;
+padding:25px 10px;
+margin-top:60px;
+font-size:15px;
 }
 
 /* MOBILE */
@@ -212,6 +273,14 @@ display:block;
 
 .grid{
 grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.card{
+text-align:left;
 }
 
 }
