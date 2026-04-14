@@ -151,7 +151,7 @@ color:#555;
 line-height:1.6;
 }
 
-/* SERVICE LIST (NO DOTS, CLEAN LINES) */
+/* SERVICE LIST */
 .service-list{
 list-style:none;
 margin-top:10px;
@@ -251,16 +251,37 @@ font-size:15px;
 }
 
 /* MOBILE */
+/* MOBILE NAVBAR FIX */
 @media(max-width:768px){
+
+.navbar{
+padding:12px 18px;
+}
+
+.logo span{
+font-size:16px;
+}
 
 .menu{
 display:none;
 flex-direction:column;
 position:absolute;
-top:70px;
+top:65px;
 left:0;
 width:100%;
 background:white;
+box-shadow:0 10px 20px rgba(0,0,0,0.08);
+padding:10px 0;
+}
+
+.menu a{
+padding:12px 20px;
+border-bottom:1px solid #eee;
+font-size:15px;
+}
+
+.menu a:last-child{
+border-bottom:none;
 }
 
 .menu.active{
@@ -271,18 +292,21 @@ display:flex;
 display:block;
 }
 
+/* GRID FIX */
 .grid{
 grid-template-columns:1fr;
 }
 
+/* HERO TEXT */
 .hero h1{
-font-size:28px;
+font-size:26px;
 }
 
-.card{
-text-align:left;
+.hero p{
+font-size:14px;
 }
 
+}
 }
 /*(FLEET PAGE ISSUE) */
 .navbar{
