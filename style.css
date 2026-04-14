@@ -16,6 +16,7 @@ padding-top:70px;
 .navbar{
 position:fixed;
 top:0;
+left:0;
 width:100%;
 background:white;
 display:flex;
@@ -151,7 +152,7 @@ color:#555;
 line-height:1.6;
 }
 
-/* SERVICE LIST */
+/* SERVICE LIST (NO DOTS) */
 .service-list{
 list-style:none;
 margin-top:10px;
@@ -251,17 +252,14 @@ font-size:15px;
 }
 
 /* MOBILE */
-/* MOBILE NAVBAR FIX */
 @media(max-width:768px){
 
+/* NAVBAR */
 .navbar{
 padding:12px 18px;
 }
 
-.logo span{
-font-size:16px;
-}
-
+/* HIDE MENU */
 .menu{
 display:none;
 flex-direction:column;
@@ -271,28 +269,30 @@ left:0;
 width:100%;
 background:white;
 box-shadow:0 10px 20px rgba(0,0,0,0.08);
-padding:10px 0;
 }
 
+/* SHOW MENU WHEN ACTIVE */
+.menu.active{
+display:flex;
+}
+
+/* MENU ITEMS */
 .menu a{
-padding:12px 20px;
+padding:14px 20px;
 border-bottom:1px solid #eee;
-font-size:15px;
+font-size:16px;
 }
 
 .menu a:last-child{
 border-bottom:none;
 }
 
-.menu.active{
-display:flex;
-}
-
+/* SHOW HAMBURGER */
 .menu-btn{
 display:block;
 }
 
-/* GRID FIX */
+/* GRID */
 .grid{
 grid-template-columns:1fr;
 }
@@ -306,22 +306,4 @@ font-size:26px;
 font-size:14px;
 }
 
-}
-}
-/*(FLEET PAGE ISSUE) */
-.navbar{
-display:flex !important;
-flex-direction:row !important;
-justify-content:space-between !important;
-align-items:center !important;
-}
-
-.menu{
-display:flex !important;
-flex-direction:row !important;
-}
-
-.logo{
-display:flex !important;
-align-items:center !important;
 }
