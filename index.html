@@ -5,247 +5,91 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RV Travels</title>
 
-<style>
+<link rel="stylesheet" href="style.css">
 
-/* RESET */
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Segoe UI',sans-serif;background:#f5f7fb;color:#1f2937;}
-
-/* NAVBAR */
-.navbar{
-position:fixed;
-top:0;
-width:100%;
-background:white;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 30px;
-box-shadow:0 4px 15px rgba(0,0,0,0.08);
-z-index:1000;
-}
-
-.logo{
-font-weight:600;
-font-size:18px;
-}
-
-/* HERO (YOUR STYLE) */
-.hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-padding:80px 8%;
-color:white;
-background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') center/cover no-repeat;
-position:relative;
-}
-
-.hero::before{
-content:"";
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.5);
-top:0;
-left:0;
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-max-width:650px;
-}
-
-.hero h1{
-font-size:44px;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:16px;
-line-height:1.6;
-}
-
-/* SECTION */
-.section{
-padding:70px 8%;
-}
-
-/* TITLE */
-.section h2{
-font-size:28px;
-margin-bottom:20px;
-}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-}
-
-/* CARD */
-.card{
-background:white;
-border-radius:14px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card img{
-width:100%;
-height:200px;
-object-fit:cover;
-}
-
-.card-content{
-padding:15px;
-}
-
-.card h3{
-margin-bottom:8px;
-}
-
-/* ABOUT */
-.about{
-max-width:800px;
-line-height:1.7;
-}
-
-/* CONTACT */
-.contact{
-max-width:420px;
-margin:auto;
-background:white;
-padding:25px;
-border-radius:14px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-text-align:center;
-}
-
-/* BUTTONS */
-.btn{
-display:inline-block;
-margin-top:10px;
-padding:12px 18px;
-border-radius:8px;
-text-decoration:none;
-color:white;
-background:#25D366;
-}
-
-/* ANIMATION */
-.fade{
-opacity:0;
-transform:translateY(40px);
-transition:all 0.7s ease;
-}
-
-.fade.show{
-opacity:1;
-transform:translateY(0);
-}
-
-/* MOBILE */
-@media(max-width:768px){
-.grid{
-grid-template-columns:1fr;
-}
-.hero h1{
-font-size:28px;
-}
-}
-
-</style>
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<div class="navbar">
-<div class="logo">RV Travels</div>
-</div>
+<header class="navbar">
+  <div class="logo">RV Travels</div>
+
+  <nav class="menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="fleet.html">Fleet</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
 <!-- HERO -->
-<section class="hero">
-<div class="hero-content fade">
-<h1>Premium Car Rental Service in South Gujarat</h1>
-<p>20+ Years of Trusted Service • Clean Cars • Professional Drivers • 24/7 Availability</p>
-</div>
+<section class="hero" style="background-image:url('https://www.image2url.com/r2/default/images/1776075695647-03aa59e1-4032-46c7-ad1f-663eb423f872.jpg')">
+
+  <div class="hero-content">
+    <h1>Premium Car Rental Service in South Gujarat</h1>
+    <p>20+ Years of Trusted Service • Clean Cars • Professional Drivers • 24/7 Availability</p>
+  </div>
+
 </section>
 
-<!-- SERVICES -->
+<!-- SERVICES PREVIEW -->
 <section class="section">
-<h2 class="fade">Our Services</h2>
+  <h2>Our Services</h2>
 
-<div class="grid">
+  <div class="grid">
 
-<div class="card fade">
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
-<div class="card-content">
-<h3>Local Travel</h3>
-<p>Comfortable city rides across Navsari, Surat and nearby regions.</p>
-</div>
-</div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+      <h3>Local Travel</h3>
+      <p>Comfortable city rides across Navsari, Surat and nearby areas.</p>
+    </div>
 
-<div class="card fade">
-<img src="https://images.unsplash.com/photo-1502920917128-1aa500764ce7">
-<div class="card-content">
-<h3>Airport Transfers</h3>
-<p>Reliable pickups and drops with on-time guarantee.</p>
-</div>
-</div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1502920917128-1aa500764ce7">
+      <h3>Airport Transfer</h3>
+      <p>Reliable and on-time pickup & drop services.</p>
+    </div>
 
-<div class="card fade">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-<div class="card-content">
-<h3>Outstation Trips</h3>
-<p>Travel across India with comfort and experienced drivers.</p>
-</div>
-</div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+      <h3>Outstation Trips</h3>
+      <p>Travel across India with comfort and experienced drivers.</p>
+    </div>
 
-</div>
+  </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ABOUT PREVIEW -->
 <section class="section">
-<h2 class="fade">About Us</h2>
-<p class="about fade">
-RV Travels has been serving South Gujarat since 2004 with a focus on reliability, comfort, and customer satisfaction. With a fleet of well-maintained vehicles and experienced drivers, we ensure safe and smooth travel experiences for every journey — whether local, airport, or long-distance.
-</p>
+  <h2>About Us</h2>
+
+  <p class="about-text">
+    RV Travels has been serving South Gujarat since 2004, providing reliable, safe,
+    and comfortable travel solutions. With a well-maintained fleet and professional
+    drivers, we focus on delivering smooth journeys and complete customer satisfaction.
+  </p>
+
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACT PREVIEW -->
 <section class="section">
-<div class="contact fade">
-<h2>Contact Us</h2>
-<p>Book your ride instantly via WhatsApp.</p>
-<a href="https://wa.me/919825656444?text=Hi!%20I%20would%20like%20to%20book." class="btn">WhatsApp Now</a>
-</div>
+  <div class="contact-box">
+    <h2>Contact Us</h2>
+    <p>Book your ride easily via call or WhatsApp.</p>
+
+    <div class="buttons">
+      <a href="tel:+919825656444" class="btn call">Call</a>
+      <a href="https://wa.me/919825656444?text=Hi!%20I%20would%20like%20to%20book." class="btn whatsapp">WhatsApp</a>
+    </div>
+  </div>
 </section>
 
-<script>
-
-/* SMOOTH ANIMATION */
-const items=document.querySelectorAll('.fade');
-
-const observer=new IntersectionObserver((entries)=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('show');
-}
-});
-});
-
-items.forEach(el=>observer.observe(el));
-
-</script>
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 RV Travels | Navsari</p>
+</footer>
 
 </body>
 </html>
