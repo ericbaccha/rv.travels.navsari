@@ -152,7 +152,7 @@ color:#555;
 line-height:1.6;
 }
 
-/* SERVICE LIST (NO DOTS) */
+/* SERVICE LIST (CLEAN LINES) */
 .service-list{
 list-style:none;
 margin-top:10px;
@@ -254,40 +254,55 @@ font-size:15px;
 /* MOBILE */
 @media(max-width:768px){
 
-/* NAVBAR */
 .navbar{
 padding:12px 18px;
 }
 
-/* HIDE MENU */
+/* MODERN DROPDOWN */
 .menu{
-display:none;
 flex-direction:column;
 position:absolute;
 top:65px;
 left:0;
 width:100%;
 background:white;
-box-shadow:0 10px 20px rgba(0,0,0,0.08);
+box-shadow:0 15px 30px rgba(0,0,0,0.1);
+overflow:hidden;
+
+/* animation */
+max-height:0;
+opacity:0;
+transform:translateY(-10px);
+transition:all 0.35s ease;
 }
 
-/* SHOW MENU WHEN ACTIVE */
+/* OPEN STATE */
 .menu.active{
-display:flex;
+max-height:300px;
+opacity:1;
+transform:translateY(0);
 }
 
-/* MENU ITEMS */
+/* ITEMS */
 .menu a{
-padding:14px 20px;
-border-bottom:1px solid #eee;
+padding:14px 22px;
 font-size:16px;
+font-weight:500;
+border-bottom:1px solid #f1f1f1;
+transition:0.25s;
+}
+
+.menu a:hover{
+background:#f5f7fb;
+padding-left:28px;
+color:#1e40af;
 }
 
 .menu a:last-child{
 border-bottom:none;
 }
 
-/* SHOW HAMBURGER */
+/* SHOW BUTTON */
 .menu-btn{
 display:block;
 }
@@ -304,26 +319,6 @@ font-size:26px;
 
 .hero p{
 font-size:14px;
-}
-
-}
-/* FORCE MOBILE MENU TO SHOW */
-@media(max-width:768px){
-
-.menu{
-display:none;
-}
-
-.menu.active{
-display:flex !important;
-flex-direction:column;
-position:absolute;
-top:65px;
-left:0;
-width:100%;
-background:white;
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
-z-index:999;
 }
 
 }
