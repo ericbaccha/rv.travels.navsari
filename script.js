@@ -1,28 +1,15 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-const btn = document.getElementById("menu-btn");
-const mobile = document.getElementById("mobile-menu");
+const elements = document.querySelectorAll(".fade-in");
 
-if(btn && mobile){
-btn.addEventListener("click", function(){
-mobile.classList.toggle("active");
-});
-}
-
-/* ANIMATION */
-const elements = document.querySelectorAll(".animate");
-
-function runAnimation(){
-elements.forEach(el=>{
-const top = el.getBoundingClientRect().top;
-
-if(top < window.innerHeight - 80){
-el.classList.add("show");
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
 }
 });
-}
+});
 
-runAnimation();
-window.addEventListener("scroll", runAnimation);
+elements.forEach(el => observer.observe(el));
 
 });
