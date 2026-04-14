@@ -1,15 +1,17 @@
-document.addEventListener("DOMContentLoaded", function(){
+<script>
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
 
-const elements = document.querySelectorAll(".fade-in");
+const items=document.querySelectorAll('.reveal');
 
-const observer = new IntersectionObserver((entries)=>{
+const observer=new IntersectionObserver((entries)=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){
-entry.target.classList.add("show");
+entry.target.classList.add('show');
 }
 });
 });
 
-elements.forEach(el => observer.observe(el));
-
-});
+items.forEach(el=>observer.observe(el));
+</script>
