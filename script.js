@@ -1,15 +1,31 @@
+/* MOBILE MENU TOGGLE */
 function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
+const menu = document.getElementById("menu");
+menu.classList.toggle("active");
 }
 
-const observer = new IntersectionObserver((entries)=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
+
+/* CLOSE MENU WHEN CLICKING A LINK */
+document.querySelectorAll(".menu a").forEach(link => {
+link.addEventListener("click", () => {
+document.getElementById("menu").classList.remove("active");
+});
+});
+
+
+/* SCROLL ANIMATION (REVEAL EFFECT) */
+function revealElements(){
+const reveals = document.querySelectorAll(".reveal");
+
+reveals.forEach(el => {
+const windowHeight = window.innerHeight;
+const elementTop = el.getBoundingClientRect().top;
+
+if(elementTop < windowHeight - 80){
+el.classList.add("show");
 }
 });
-},{threshold:0.12});
+}
 
-document.querySelectorAll(".reveal").forEach(el=>{
-observer.observe(el);
-});
+window.addEventListener("scroll", revealElements);
+window.addEventListener("load", revealElements);
