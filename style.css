@@ -284,3 +284,20 @@ text-align:left;
 }
 
 }
+/*(FLEET PAGE ISSUE) */
+.navbar{
+display:flex !important;
+flex-direction:row !important;
+justify-content:space-between !important;
+align-items:center !important;
+}
+
+.menu{
+display:flex !important;
+flex-direction:row !important;
+}
+
+.logo{
+display:flex !important;
+align-items:center !important;
+}
