@@ -9,14 +9,33 @@
 
 /* RESET */
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family: 'Segoe UI', sans-serif;background:#f5f7fb;color:#1f2937;}
+body{font-family:'Segoe UI',sans-serif;background:#f5f7fb;color:#1f2937;}
 
-/* HERO */
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+z-index:1000;
+}
+
+.logo{
+font-weight:600;
+font-size:18px;
+}
+
+/* HERO (YOUR STYLE) */
 .hero{
-height:100vh;
+min-height:100vh;
 display:flex;
 align-items:center;
-padding:60px 8%;
+padding:80px 8%;
 color:white;
 background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') center/cover no-repeat;
 position:relative;
@@ -35,12 +54,12 @@ left:0;
 .hero-content{
 position:relative;
 z-index:2;
-max-width:600px;
+max-width:650px;
 }
 
 .hero h1{
-font-size:42px;
-margin-bottom:12px;
+font-size:44px;
+margin-bottom:15px;
 }
 
 .hero p{
@@ -50,7 +69,13 @@ line-height:1.6;
 
 /* SECTION */
 .section{
-padding:60px 8%;
+padding:70px 8%;
+}
+
+/* TITLE */
+.section h2{
+font-size:28px;
+margin-bottom:20px;
 }
 
 /* GRID */
@@ -63,32 +88,63 @@ gap:25px;
 /* CARD */
 .card{
 background:white;
-padding:20px;
-border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-6px);
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card-content{
+padding:15px;
+}
+
+.card h3{
+margin-bottom:8px;
+}
+
+/* ABOUT */
+.about{
+max-width:800px;
+line-height:1.7;
 }
 
 /* CONTACT */
 .contact{
-max-width:400px;
+max-width:420px;
 margin:auto;
 background:white;
 padding:25px;
-border-radius:12px;
+border-radius:14px;
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
 text-align:center;
+}
+
+/* BUTTONS */
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:12px 18px;
+border-radius:8px;
+text-decoration:none;
+color:white;
+background:#25D366;
 }
 
 /* ANIMATION */
 .fade{
 opacity:0;
 transform:translateY(40px);
-transition:all 0.6s ease;
+transition:all 0.7s ease;
 }
 
 .fade.show{
@@ -101,9 +157,6 @@ transform:translateY(0);
 .grid{
 grid-template-columns:1fr;
 }
-.hero{
-padding:40px;
-}
 .hero h1{
 font-size:28px;
 }
@@ -114,48 +167,75 @@ font-size:28px;
 
 <body>
 
+<!-- NAVBAR -->
+<div class="navbar">
+<div class="logo">RV Travels</div>
+</div>
+
 <!-- HERO -->
 <section class="hero">
 <div class="hero-content fade">
-<h1>Premium Car Rental Service</h1>
-<p>20+ Years of Trusted Service • Clean Cars • On-Time Guarantee • 24/7 Support</p>
+<h1>Premium Car Rental Service in South Gujarat</h1>
+<p>20+ Years of Trusted Service • Clean Cars • Professional Drivers • 24/7 Availability</p>
 </div>
 </section>
 
 <!-- SERVICES -->
 <section class="section">
+<h2 class="fade">Our Services</h2>
+
 <div class="grid">
+
 <div class="card fade">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+<div class="card-content">
 <h3>Local Travel</h3>
-<p>Comfortable rides across Navsari, Surat & nearby areas.</p>
+<p>Comfortable city rides across Navsari, Surat and nearby regions.</p>
+</div>
 </div>
 
 <div class="card fade">
-<h3>Airport Transfer</h3>
-<p>On-time pickup & drop for all major airports.</p>
+<img src="https://images.unsplash.com/photo-1502920917128-1aa500764ce7">
+<div class="card-content">
+<h3>Airport Transfers</h3>
+<p>Reliable pickups and drops with on-time guarantee.</p>
+</div>
 </div>
 
 <div class="card fade">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+<div class="card-content">
 <h3>Outstation Trips</h3>
-<p>Pan-India travel with experienced drivers.</p>
+<p>Travel across India with comfort and experienced drivers.</p>
 </div>
 </div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+<h2 class="fade">About Us</h2>
+<p class="about fade">
+RV Travels has been serving South Gujarat since 2004 with a focus on reliability, comfort, and customer satisfaction. With a fleet of well-maintained vehicles and experienced drivers, we ensure safe and smooth travel experiences for every journey — whether local, airport, or long-distance.
+</p>
 </section>
 
 <!-- CONTACT -->
 <section class="section">
 <div class="contact fade">
 <h2>Contact Us</h2>
-<p>Book your ride easily via call or WhatsApp.</p>
+<p>Book your ride instantly via WhatsApp.</p>
+<a href="https://wa.me/919825656444?text=Hi!%20I%20would%20like%20to%20book." class="btn">WhatsApp Now</a>
 </div>
 </section>
 
 <script>
 
-/* SMOOTH SCROLL ANIMATION */
-const elements = document.querySelectorAll('.fade');
+/* SMOOTH ANIMATION */
+const items=document.querySelectorAll('.fade');
 
-const observer = new IntersectionObserver((entries)=>{
+const observer=new IntersectionObserver((entries)=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){
 entry.target.classList.add('show');
@@ -163,7 +243,7 @@ entry.target.classList.add('show');
 });
 });
 
-elements.forEach(el => observer.observe(el));
+items.forEach(el=>observer.observe(el));
 
 </script>
 
